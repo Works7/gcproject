@@ -1,0 +1,47 @@
+// --------------------------------
+
+// Media Wrapper - https://codyhouse.co/ds/docs/framework/utilities#media-wrapper
+
+// --------------------------------
+
+.media-wrapper--4\:5 { 
+  padding-bottom: 125%; // calc(5/4*100)
+}
+
+// --------------------------------
+
+// Transform
+
+// --------------------------------
+
+// translate y - used to fix 1px separation between sections with same background color
+.-translate-y-1 { transform: translateY(-1px); }
+.-translate-y-2 { transform: translateY(-2px); }
+.translate-y-1 { transform: translateY(1px); }
+.translate-y-2 { transform: translateY(2px); }
+
+// --------------------------------
+
+// Padding
+
+// --------------------------------
+
+.padding-top-header { // padding top = main header height
+  padding-top: var(--mega-nav-height);
+}
+
+// --------------------------------
+
+// IE 11 support
+
+// --------------------------------
+
+.ie {
+  .ie\:bg {
+    background-color: var(--color-bg);
+  }
+
+  .ie\:padding-md {
+    padding: var(--space-md);
+  }
+}

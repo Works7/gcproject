@@ -1,0 +1,16 @@
+:root {
+  // border radius
+  --radius: 0.25em; // border radius base size (e.g., images, blocks)
+}
+
+.text-style-1 {
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1px;
+    background-color: currentColor;
+    vertical-align: middle;
+    margin-right: var(--space-xxxs);
+  }
+}
