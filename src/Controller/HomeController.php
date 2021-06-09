@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\ProductRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -10,16 +11,12 @@ class HomeController extends AbstractController
     /**
      * @Route("/", name="homepage")
      */
-    public function HomeController()
+    public function homepage(ProductRepository $productRepository)
     {
-        return $this->render('home.html.twig');
-    }
+        $products = $productRepository->findBy([], [], 3);
 
-    /**
-     * @Route("/cart", name="cart")
-     */
-    public function CartController()
-    {
-        return $this->render('cart.html.twig');
+        return $this->render('home.html.twig', [
+            'products' => $products
+        ]);
     }
 }
