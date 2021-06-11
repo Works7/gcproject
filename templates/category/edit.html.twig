@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Édition de la catégorie :
+	{{ category.name }}
+
+{% endblock %}
+
+{% block body %}
+	<div class="container max-width-adaptive-lg margin-top-lg margin-bottom-lg">
+		<fieldset class="margin-bottom-md">
+			<legend class="form-legend">Édition d'une catégorie
+				{{ category.name }}</legend>
+			{{ form_start(formView) }}
+
+			<div class="grid gap-sm">
+				{{ form_label(formView.name) }}
+				{{ form_widget(formView.name, {'attr': {'class': 'form-control width-100%'} }) }}
+
+				{{ form_errors(formView) }}
+			</div>
+
+			<div>
+				<button type="submit" class="btn btn--primary margin-top-md">Éditer la catégorie</button>
+			</div>
+
+			{{ form_end(formView) }}
+		</fieldset>
+	</div>
+{% endblock %}

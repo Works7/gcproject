@@ -45,7 +45,7 @@
 					{% for p in products %}
 						<li class="carousel__item">
 							<div class="prod-card-v2">
-								<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+								<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
 									<figure class="media-wrapper media-wrapper--4:5">
 										<img src="{{ p.mainPicture }}" alt="Product preview image">
 									</figure>
@@ -53,7 +53,7 @@
 
 								<div class="padding-sm text-center">
 									<h2 class="text-md font-primary">
-										<a href="#0" class="product-card-v2__title">{{ p.name}}</a>
+										<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="product-card-v2__title">{{ p.name}}</a>
 									</h2>
 								</div>
 							</div>
@@ -110,7 +110,7 @@
 					<div class="text-component v-space-md height-100% flex flex-column padding-md">
 						<h2>Pâtisseries</h2>
 						<p class="margin-top-auto">
-							<a href="#0" class="feature-v10__link">
+							<a href="{{ path('product_category', {'slug' : 'patisseries'}) }}" class="feature-v10__link">
 								<i>Découvrir</i>
 							</a>
 						</p>
@@ -131,7 +131,7 @@
 					<div class="text-component v-space-md height-100% flex flex-column padding-md">
 						<h2>Chocolats</h2>
 						<p class="margin-top-auto">
-							<a href="#0" class="feature-v10__link">
+							<a href="{{ path('product_category', {'slug' : 'chocolats'}) }}" class="feature-v10__link">
 								<i>Découvrir</i>
 							</a>
 						</p>

@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Création d'une catégorie
+{% endblock %}
+
+{% block body %}
+	<div class="container max-width-adaptive-lg margin-top-lg margin-bottom-lg">
+		<fieldset class="margin-bottom-md">
+			<legend class="form-legend">Création d'une catégorie</legend>
+			{{ form_start(formView) }}
+
+			{{ form_errors(formView) }}
+
+			<div class="grid gap-sm">
+				{{ form_label(formView.name) }}
+				{{ form_widget(formView.name, {'attr': {'class': 'form-control width-100%'} }) }}
+
+				{{ form_errors(formView) }}
+			</div>
+
+			<div>
+				<button type="submit" class="btn btn--primary margin-top-md">Créer la catégorie</button>
+			</div>
+
+			{{ form_end(formView) }}
+		</fieldset>
+	</div>
+{% endblock %}
