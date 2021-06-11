@@ -8,7 +8,8 @@
 {% block body %}
 	<div class="container max-width-adaptive-lg margin-top-lg margin-bottom-lg">
 		<fieldset class="margin-bottom-md">
-			<legend class="form-legend">Édition d'un produit</legend>
+			<legend class="form-legend">Édition d'un produit :
+				{{ product.name }}</legend>
 			{{ form_start(formView) }}
 
 			{{ form_errors(formView) }}
