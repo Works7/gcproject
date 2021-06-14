@@ -16,8 +16,9 @@ class CategoryType extends AbstractType
             ->add('name', TextType::class, [
                 'label' => 'Nom de la catégorie',
                 'attr' => [
-                    'placeholder' => "Tapez le nom de la catégorie"
-                ]
+                    'placeholder' => "Tapez le nom de la catégorie",
+                ],
+                'required' => false
             ]);
     }
 

@@ -19,4 +19,36 @@ class HomeController extends AbstractController
             'products' => $products
         ]);
     }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contact()
+    {
+        return $this->render('contact.html.twig');
+    }
+
+    /**
+     * @Route("/gallery", name="gallery")
+     */
+    public function gallery()
+    {
+        return $this->render('gallery.html.twig');
+    }
+
+    /**
+     * @Route("/posts", name="posts")
+     */
+    public function posts()
+    {
+        return $this->render('posts.html.twig');
+    }
+
+    /**
+     * @Route("/chocolats", name="chocolats")
+     */
+    public function chocolats()
+    {
+        return $this->render('chocolats.html.twig');
+    }
 }

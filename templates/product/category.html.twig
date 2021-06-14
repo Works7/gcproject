@@ -32,32 +32,36 @@
 					<ol class="flex flex-wrap gap-xxs">
 						<li class="breadcrumbs__item">
 							<a href="{{ path('homepage') }}" class="color-inherit">Accueil</a>
-							<span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
+							<svg class="icon margin-left-xxxs color-contrast-medium" aria-hidden="true" viewbox="0 0 16 16">
+								<g stroke-width="1" stroke="currentColor">
+									<polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="6.5,3.5 11,8 6.5,12.5 "></polyline>
+								</g>
+							</svg>
 						</li>
 						<li class="breadcrumbs__item" aria-current="page">{{ category.name }}</li>
-					</ol>
-				</nav>
-			</div>
-
-			<ul class="grid gap-sm">
-				{% for p in category.products %}
-					<li class="col6@xs col-4@sm col-3@md">
-						<div class="prod-card-v2">
-							<a href="{{ path('homepage') }}" class="prod-card-v2__img-link" aria-label="Description of the link">
-								<figure class="media-wrapper media-wrapper--4:5">
-									<img src="assets/img/product-card-v2-img-1a.jpg" alt="Product preview image">
-								</figure>
-							</a>
-
-							<div class="padding-sm text-center">
-								<h2 class="text-md font-primary">
-									<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="product-card-v2__title">{{ p.name }}</a>
-								</h2>
-							</div>
-						</div>
 					</li>
-				{% endfor %}
-			</ul>
+				</ol>
+			</nav>
 		</div>
-	</section>
-{% endblock %}
+
+		<ul class="grid gap-sm">
+			{% for p in category.products %}
+				<li class="col6@xs col-4@sm col-3@md">
+					<div class="prod-card-v2">
+						<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
+							<figure class="media-wrapper media-wrapper--4:5">
+								<img src="assets/img/product-card-v2-img-1a.jpg" alt="Product preview image">
+							</figure>
+						</a>
+
+						<div class="padding-sm text-center">
+							<h2 class="text-md font-primary">
+								<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="product-card-v2__title">{{ p.name }}</a>
+							</h2>
+						</div>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>{% endblock %}
