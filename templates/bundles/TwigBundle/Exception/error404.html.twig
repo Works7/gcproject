@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Page non trouvée | Ganache &amp; Cabosse
+{% endblock %}
+
+{% block body %}
+	<section class="min-height-100vh bg-cover bg-center bg-no-repeat flex flex-center" style="background-image: url('{{ asset('build/images/intro-img-1-gc.jpg') }}');">
+		<div class="text-component container max-width-xs text-center padding-lg bg bg-opacity-80% backdrop-blur-10 radius-lg">
+			<h1 class="text-xxxl">404</h1>
+			<p>La page que vous recherchez n'existe pas.</p>
+			<p>
+				<a href="{{ path('homepage') }}">Retour à l'accueil</a>
+			</p>
+		</div>
+	</section>
+{% endblock %}

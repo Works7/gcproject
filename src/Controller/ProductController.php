@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
+use App\Entity\Image;
 use App\Entity\Product;
 use App\Form\ProductType;
 use App\Repository\ProductRepository;
@@ -38,6 +40,14 @@ class ProductController extends AbstractController
     }
 
     /**
+     * @Route("/chocolats", name="product_chocolats")
+     */
+    public function chocolats()
+    {
+        return $this->render('product/chocolats.html.twig');
+    }
+
+    /**
      * @Route("/{category_slug}/{slug}", name="product_show")
      */
     public function show($slug, ProductRepository $productRepository, CategoryRepository $categoryRepository)
@@ -51,6 +61,7 @@ class ProductController extends AbstractController
         }
 
         return $this->render('product/show.html.twig', [
+            'slug' => $slug,
             'product' => $product
         ]);
     }

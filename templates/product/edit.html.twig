@@ -8,18 +8,28 @@
 {% block body %}
 	<div class="container max-width-adaptive-lg margin-top-lg margin-bottom-lg">
 		<fieldset class="margin-bottom-md">
-			<legend class="form-legend">Édition d'un produit :
+			<legend class="form-legend">Édition du produit :
 				{{ product.name }}</legend>
 			{{ form_start(formView) }}
 
 			{{ form_errors(formView) }}
 
 			<div class="grid gap-sm">
-				{{ form_row(formView.name) }}
-				{{ form_row(formView.price) }}
-				{{ form_row(formView.category) }}
-				{{ form_row(formView.details) }}
-				{{ form_row(formView.mainPicture) }}
+				{{ form_label(formView.name) }}
+				{{ form_widget(formView.name, {'attr': {'class': 'form-control width-100%'} }) }}
+
+				{{ form_label(formView.price) }}
+				{{ form_widget(formView.price, {'attr': {'class': 'form-control width-100%'} }) }}
+
+				{{ form_label(formView.category) }}
+				{{ form_widget(formView.category, {'attr': {'class': 'form-control width-100%'} }) }}
+
+				{{ form_label(formView.details) }}
+				{{ form_widget(formView.details, {'attr': {'class': 'form-control width-100%'} }) }}
+
+				{{ form_label(formView.mainPicture) }}
+				{{ form_widget(formView.mainPicture, {'attr': {'class': 'form-control width-100%'} }) }}
+
 			</div>
 
 			<div>
@@ -28,14 +38,5 @@
 
 			{{ form_end(formView) }}
 		</fieldset>
-	</div>
-{% endblock %}
-
-{% block form_row %}
-	<div class="form-group">
-		{{ form_label(form) }}
-		{{ form_widget(form, {'attr': {'class': 'form-control width-100%'} }) }}
-		{{ form_help(form) }}
-		{{ form_errors(form) }}
 	</div>
 {% endblock %}

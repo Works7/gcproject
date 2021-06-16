@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Category;
+use App\Entity\Image;
 use App\Entity\Product;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -25,61 +26,709 @@ class AppFixtures extends Fixture
     {
         $admin = new User;
 
-        $hash = $this->encoder->encodePassword($admin, "password");
+        $hash = $this->encoder->encodePassword($admin, "p%G5MrISy9FKXRZwd5");
 
-        $admin->setEmail("admin@gmail.com")
+        $admin->setEmail("administrateur@ganacheetcabosse.com")
             ->setPassword($hash)
             ->setFullName("Admin")
             ->setRoles(['ROLE_ADMIN']);
 
         $manager->persist($admin);
 
-        for ($u = 0; $u < 5; $u++) {
-            $user = new User();
-            $hash = $this->encoder->encodePassword($user, "password");
-            $user->setEmail("user$u@gmail.com")
-                ->setFullName("User")
-                ->setPassword($hash);
-
-            $manager->persist($user);
-        }
-
+        // Catégorie - Pâtisserie
         $patisseries = new Category;
-        $patisseries->setName('Pâtisseries')
+        $patisseries->setName("Pâtisseries")
             ->setSlug(strtolower($this->slugger->slug($patisseries->getName())));
         $manager->persist($patisseries);
 
-        $patisserie1 = new Product;
-        $patisserie1->setName('Éclair vanille')
-            ->setPrice(0)
-            ->setCategory($patisseries)
-            ->setDetails('La description de l\'éclair vanille')
-            ->setMainPicture("http:/placehold.it/400x400")
-            ->setSlug(strtolower($this->slugger->slug($patisserie1->getName())));
-        $manager->persist($patisserie1);
-
-        $patisserie2 = new Product;
-        $patisserie2->setName('3 chocolats')
-            ->setPrice(0)
-            ->setCategory($patisseries)
-            ->setDetails('La description du 3 chocolats')
-            ->setMainPicture("http:/placehold.it/400x400")
-            ->setSlug(strtolower($this->slugger->slug($patisserie2->getName())));
-        $manager->persist($patisserie2);
-
+        // Catégorie - Macarons
         $macarons = new Category;
-        $macarons->setName('Macarons')
+        $macarons->setName("Macarons")
             ->setSlug(strtolower($this->slugger->slug($macarons->getName())));
         $manager->persist($macarons);
 
+        // Catégorie - Bonbons de chocolat
+        $bonbonsChocolat = new Category;
+        $bonbonsChocolat->setName("Bonbons de chocolat")
+            ->setSlug(strtolower($this->slugger->slug($bonbonsChocolat->getName())));
+        $manager->persist($bonbonsChocolat);
+
+        // Catégorie - Tablettes de chocolat
+        $tablettesChocolat = new Category;
+        $tablettesChocolat->setName("Tablettes de chocolat")
+            ->setSlug(strtolower($this->slugger->slug($tablettesChocolat->getName())));
+        $manager->persist($tablettesChocolat);
+
+        // Catégorie - Spécialités en chocolat
+        $specialitesChocolat = new Category;
+        $specialitesChocolat->setName("Spécialités en chocolat")
+            ->setSlug(strtolower($this->slugger->slug($specialitesChocolat->getName())));
+        $manager->persist($specialitesChocolat);
+
+        // Catégorie - Moulages
+        $moulagesChocolat = new Category;
+        $moulagesChocolat->setName("Moulages")
+            ->setSlug(strtolower($this->slugger->slug($moulagesChocolat->getName())));
+        $manager->persist($moulagesChocolat);
+
+        // Article - Pâtisserie
+        $patisserie1 = new Product;
+        $patisserie1->setName("3 Chocolats")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-3-chocolats-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie1->getName())));
+
+        $imagePatisserie1 = new Image();
+        $imagePatisserie1->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-3-chocolats-2.jpg")
+            ->setProduct($patisserie1);
+        $manager->persist($imagePatisserie1);
+
+        $manager->persist($patisserie1);
+
+        // Article - Pâtisserie
+        $patisserie2 = new Product;
+        $patisserie2->setName("Bavarois Framboise")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-bavarois-framboise-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie2->getName())));
+
+        $imagePatisserie2 = new Image();
+        $imagePatisserie2->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-bavarois-framboise-2.jpg")
+            ->setProduct($patisserie2);
+        $manager->persist($imagePatisserie2);
+
+        $manager->persist($patisserie2);
+
+        // Article - Pâtisserie
+        $patisserie3 = new Product;
+        $patisserie3->setName("Bûcheron")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-bucheron-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie3->getName())));
+
+        $imagePatisserie3 = new Image();
+        $imagePatisserie3->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-bucheron-2.jpg")
+            ->setProduct($patisserie3);
+        $manager->persist($imagePatisserie3);
+
+        $manager->persist($patisserie3);
+
+        // Article - Pâtisserie
+        $patisserie4 = new Product;
+        $patisserie4->setName("Fôret Noire")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-foret-noire-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie4->getName())));
+
+        $imagePatisserie4 = new Image();
+        $imagePatisserie4->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-foret-noire-2.jpg")
+            ->setProduct($patisserie4);
+        $manager->persist($imagePatisserie4);
+
+        $imagePatisserie41 = new Image();
+        $imagePatisserie41->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-foret-noire-3.jpg")
+            ->setProduct($patisserie4);
+        $manager->persist($imagePatisserie41);
+
+        $manager->persist($patisserie4);
+
+        // Article - Pâtisserie
+        $patisserie5 = new Product;
+        $patisserie5->setName("Fraisier")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-fraisier-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie5->getName())));
+
+        $imagePatisserie5 = new Image();
+        $imagePatisserie5->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-fraisier-2.jpg")
+            ->setProduct($patisserie5);
+        $manager->persist($imagePatisserie5);
+
+        $manager->persist($patisserie5);
+
+        // Article - Pâtisserie
+        $patisserie6 = new Product;
+        $patisserie6->setName("Framboisier")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-framboisier-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie6->getName())));
+
+        $imagePatisserie6 = new Image();
+        $imagePatisserie6->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-framboisier-2.jpg")
+            ->setProduct($patisserie6);
+        $manager->persist($imagePatisserie6);
+
+        $manager->persist($patisserie6);
+
+        // Article - Pâtisserie
+        $patisserie7 = new Product;
+        $patisserie7->setName("Multifruits")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-multifruits-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie7->getName())));
+
+        $imagePatisserie7 = new Image();
+        $imagePatisserie7->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-multifruits-2.jpg")
+            ->setProduct($patisserie7);
+        $manager->persist($imagePatisserie7);
+
+        $manager->persist($patisserie7);
+
+        // Article - Pâtisserie
+        $patisserie8 = new Product;
+        $patisserie8->setName("Paris-Brest")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-paris-brest-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie8->getName())));
+
+        $imagePatisserie8 = new Image();
+        $imagePatisserie8->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-paris-brest-2.jpg")
+            ->setProduct($patisserie8);
+        $manager->persist($imagePatisserie8);
+
+        $manager->persist($patisserie8);
+
+        // Article - Pâtisserie
+        $patisserie9 = new Product;
+        $patisserie9->setName("Tarte Caramel Beurre Salé")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-tarte-caramel-beurre-sale-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie9->getName())));
+
+        $imagePatisserie9 = new Image();
+        $imagePatisserie9->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-tarte-caramel-beurre-sale-2.jpg")
+            ->setProduct($patisserie9);
+        $manager->persist($imagePatisserie9);
+
+        $manager->persist($patisserie9);
+
+        // Article - Pâtisserie
+        $patisserie10 = new Product;
+        $patisserie10->setName("Tarte Citron Meringuée")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-tarte-citron-meringuee-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie10->getName())));
+
+        $imagePatisserie10 = new Image();
+        $imagePatisserie10->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-tarte-citron-meringuee-2.jpg")
+            ->setProduct($patisserie10);
+        $manager->persist($imagePatisserie10);
+
+        $manager->persist($patisserie10);
+
+        // Article - Pâtisserie
+        $patisserie11 = new Product;
+        $patisserie11->setName("Tarte aux fraises")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-tarte-fraise-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie10->getName())));
+
+        $imagePatisserie11 = new Image();
+        $imagePatisserie11->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-tarte-fraise-2.jpg")
+            ->setProduct($patisserie11);
+        $manager->persist($imagePatisserie11);
+
+        $manager->persist($patisserie11);
+
+        // Article - Pâtisserie
+        $patisserie12 = new Product;
+        $patisserie12->setName("Tarte aux framboises")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-tarte-framboise-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie12->getName())));
+
+        $imagePatisserie12 = new Image();
+        $imagePatisserie12->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-tarte-framboise-2.jpg")
+            ->setProduct($patisserie12);
+        $manager->persist($imagePatisserie12);
+
+        $manager->persist($patisserie12);
+
+        // Article - Macaron
         $macaron1 = new Product;
-        $macaron1->setName('Macaron Fraise')
+        $macaron1->setName("Macaron Fraise")
             ->setPrice(0)
             ->setCategory($macarons)
-            ->setDetails('La description du macaron fraise')
-            ->setMainPicture("http:/placehold.it/400x400")
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-macaron-fraise-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($macaron1->getName())));
+
+        $imageMacaron1 = new Image();
+        $imageMacaron1->setUrl("https://www.ganacheetcabosse.com/_img/macarons-macaron-fraise-2.jpg")
+            ->setProduct($macaron1);
+        $manager->persist($imageMacaron1);
+
         $manager->persist($macaron1);
+
+        // Article - Macaron
+        $macaron2 = new Product;
+        $macaron2->setName("Macaron Café")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-macaron-cafe-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron2->getName())));
+
+        $imageMacaron2 = new Image();
+        $imageMacaron2->setUrl("https://www.ganacheetcabosse.com/_img/macarons-macaron-cafe-2.jpg")
+            ->setProduct($macaron2);
+        $manager->persist($imageMacaron2);
+
+        $manager->persist($macaron2);
+
+        // Article - Macaron
+        $macaron3 = new Product;
+        $macaron3->setName("Macaron Caramel")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-macaron-caramel-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron3->getName())));
+
+        $imageMacaron3 = new Image();
+        $imageMacaron3->setUrl("https://www.ganacheetcabosse.com/_img/macarons-macaron-caramel-2.jpg")
+            ->setProduct($macaron3);
+        $manager->persist($imageMacaron3);
+
+        $manager->persist($macaron3);
+
+        // Article - Macaron
+        $macaron4 = new Product;
+        $macaron4->setName("Macaron Chocolat")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-macaron-chocolat-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron4->getName())));
+
+        $imageMacaron4 = new Image();
+        $imageMacaron4->setUrl("https://www.ganacheetcabosse.com/_img/macarons-macaron-chocolat-2.jpg")
+            ->setProduct($macaron4);
+        $manager->persist($imageMacaron4);
+
+        $manager->persist($macaron4);
+
+        // Article - Macaron
+        $macaron5 = new Product;
+        $macaron5->setName("Macaron Citron")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-macaron-citron-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron5->getName())));
+
+        $imageMacaron5 = new Image();
+        $imageMacaron5->setUrl("https://www.ganacheetcabosse.com/_img/macarons-macaron-citron-2.jpg")
+            ->setProduct($macaron5);
+        $manager->persist($imageMacaron5);
+
+        $manager->persist($macaron5);
+
+        // Article - Macaron
+        $macaron6 = new Product;
+        $macaron6->setName("Macaron Chocolat")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-macaron-framboise-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron6->getName())));
+
+        $imageMacaron6 = new Image();
+        $imageMacaron6->setUrl("https://www.ganacheetcabosse.com/_img/macarons-macaron-framboise-2.jpg")
+            ->setProduct($macaron6);
+        $manager->persist($imageMacaron6);
+
+        $manager->persist($macaron6);
+
+        // Article - Macaron
+        $macaron7 = new Product;
+        $macaron7->setName("Macaron Pistache")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-macaron-pistache-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron7->getName())));
+
+        $imageMacaron7 = new Image();
+        $imageMacaron7->setUrl("https://www.ganacheetcabosse.com/_img/macarons-macaron-pistache-2.jpg")
+            ->setProduct($macaron7);
+        $manager->persist($imageMacaron7);
+
+        $manager->persist($macaron7);
+
+        // Article - Macaron
+        $macaron8 = new Product;
+        $macaron8->setName("Macaron Vanille")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-macaron-vanille-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron8->getName())));
+
+        $imageMacaron8 = new Image();
+        $imageMacaron8->setUrl("https://www.ganacheetcabosse.com/_img/macarons-macaron-vanille-2.jpg")
+            ->setProduct($macaron8);
+        $manager->persist($imageMacaron8);
+
+        $manager->persist($macaron8);
+
+        // Article - Macaron
+        $macaron9 = new Product;
+        $macaron9->setName("Boîte de 8 Macarons")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-coffret-8-macarons.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron9->getName())));
+
+        $manager->persist($macaron9);
+
+        // Article - Macaron
+        $macaron10 = new Product;
+        $macaron10->setName("Boîte de 16 Macarons")
+            ->setPrice(0)
+            ->setCategory($macarons)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/macarons-coffret-16-macarons.jpg")
+            ->setSlug(strtolower($this->slugger->slug($macaron10->getName())));
+
+        $manager->persist($macaron10);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat1 = new Product;
+        $bonbonChocolat1->setName("Rectangle Rayé Uni Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes)")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-rectangle-raye-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat1->getName())));
+
+        $imageBonbonChocolat1 = new Image();
+        $imageBonbonChocolat1->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat1);
+        $manager->persist($imageBonbonChocolat1);
+
+        $manager->persist($bonbonChocolat1);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat2 = new Product;
+        $bonbonChocolat2->setName("Rond Uni Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, praliné amandes noisettes, grué de cacao")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-rond-uni-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat2->getName())));
+
+        $imageBonbonChocolat2 = new Image();
+        $imageBonbonChocolat2->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat2);
+        $manager->persist($imageBonbonChocolat2);
+
+        $manager->persist($bonbonChocolat2);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat3 = new Product;
+        $bonbonChocolat3->setName("Rectangle Contour Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, praliné amandes, amandes entières")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-rectangle-contour-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat3->getName())));
+
+        $imageBonbonChocolat3 = new Image();
+        $imageBonbonChocolat3->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat3);
+        $manager->persist($imageBonbonChocolat3);
+
+        $manager->persist($bonbonChocolat3);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat4 = new Product;
+        $bonbonChocolat4->setName("Sanglier Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes)")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-sanglier-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat4->getName())));
+
+        $imageBonbonChocolat4 = new Image();
+        $imageBonbonChocolat4->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat4);
+        $manager->persist($imageBonbonChocolat4);
+
+        $manager->persist($bonbonChocolat4);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat5 = new Product;
+        $bonbonChocolat5->setName("Rectangle Uni Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, praliné, pâte de cacahuètes")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-rectangle-uni-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat5->getName())));
+
+        $imageBonbonChocolat5 = new Image();
+        $imageBonbonChocolat5->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat5);
+        $manager->persist($imageBonbonChocolat5);
+
+        $manager->persist($bonbonChocolat5);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat6 = new Product;
+        $bonbonChocolat6->setName("Rond Cerclé Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, praliné amandes")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-rond-cercle-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat6->getName())));
+
+        $imageBonbonChocolat6 = new Image();
+        $imageBonbonChocolat6->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat6);
+        $manager->persist($imageBonbonChocolat6);
+
+        $manager->persist($bonbonChocolat6);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat7 = new Product;
+        $bonbonChocolat7->setName("Carré Contour Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, praliné pistache")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-carre-contour-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat7->getName())));
+
+        $imageBonbonChocolat7 = new Image();
+        $imageBonbonChocolat7->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat7);
+        $manager->persist($imageBonbonChocolat7);
+
+        $manager->persist($bonbonChocolat7);
+
+        // // Article - Bonbons de chocolat
+        // $bonbonChocolat8 = new Product;
+        // $bonbonChocolat8->setName("Ruche Spirale Noir / Lait")
+        //     ->setPrice(0)
+        //     ->setCategory($bonbonsChocolat)
+        //     ->setDetails("Chocolat noir, lait, miel de fleurs des Ardennes")
+        //     ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ruche-spirale-1.jpg")
+        //     ->setSlug(strtolower($this->slugger->slug($bonbonChocolat8->getName())));
+
+        // $imageBonbonChocolat8 = new Image();
+        // $imageBonbonChocolat8->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+        //     ->setProduct($bonbonChocolat8);
+        // $manager->persist($imageBonbonChocolat8);
+
+        // $manager->persist($bonbonChocolat8);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat9 = new Product;
+        $bonbonChocolat9->setName("Carré Uni Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, praliné noisettes, noisettes grillées hachées")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-carre-uni-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat9->getName())));
+
+        $imageBonbonChocolat9 = new Image();
+        $imageBonbonChocolat9->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat9);
+        $manager->persist($imageBonbonChocolat9);
+
+        $manager->persist($bonbonChocolat9);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat10 = new Product;
+        $bonbonChocolat10->setName("Rectangle Multi Reliefs Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes), croustillant feuilleté")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-rectangle-multi-reliefs-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat10->getName())));
+
+        $imageBonbonChocolat10 = new Image();
+        $imageBonbonChocolat10->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat10);
+        $manager->persist($imageBonbonChocolat10);
+
+        $manager->persist($bonbonChocolat10);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat11 = new Product;
+        $bonbonChocolat11->setName("Rond Rayé Noir / Lait")
+            ->setPrice(0)
+            ->setCategory($bonbonsChocolat)
+            ->setDetails("Chocolat noir, lait, pâte d’amande 55%")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-rond-raye-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat11->getName())));
+
+        $imageBonbonChocolat11 = new Image();
+        $imageBonbonChocolat11->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
+            ->setProduct($bonbonChocolat11);
+        $manager->persist($imageBonbonChocolat11);
+
+        $manager->persist($bonbonChocolat11);
+
+        // Article - Spécialité
+        $specialiteChocolat1 = new Product;
+        $specialiteChocolat1->setName("Boudins blancs")
+            ->setPrice(0)
+            ->setCategory($specialitesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/specialites-chocolat-boudins-chocolat-blanc-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($specialiteChocolat1->getName())));
+
+        $manager->persist($specialiteChocolat1);
+
+        // Article - Spécialité
+        $specialiteChocolat2 = new Product;
+        $specialiteChocolat2->setName("Ardoises ardennaises")
+            ->setPrice(0)
+            ->setCategory($specialitesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/specialites-chocolat-ardoises-ardennaises-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($specialiteChocolat2->getName())));
+
+        $manager->persist($specialiteChocolat2);
+
+        // Article - Spécialité
+        $specialiteChocolat3 = new Product;
+        $specialiteChocolat3->setName("Mendiants au chocolat noir")
+            ->setPrice(0)
+            ->setCategory($specialitesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/specialites-chocolat-mendiants-chocolat-noir-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($specialiteChocolat3->getName())));
+
+        $manager->persist($specialiteChocolat3);
+
+        // Article - Spécialité
+        $specialiteChocolat4 = new Product;
+        $specialiteChocolat4->setName("Mendiants au chocolat au lait")
+            ->setPrice(0)
+            ->setCategory($specialitesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/specialites-chocolat-mendiants-chocolat-lait-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($specialiteChocolat4->getName())));
+
+        $manager->persist($specialiteChocolat4);
+
+        // Article - Tablette de chocolat
+        $tabletteChocolat1 = new Product;
+        $tabletteChocolat1->setName("Tablette de chocolat noir")
+            ->setPrice(0)
+            ->setCategory($tablettesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/tablettes-tablette-chocolat-noir-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($tabletteChocolat1->getName())));
+
+        $manager->persist($tabletteChocolat1);
+
+        // Article - Tablette de chocolat
+        $tabletteChocolat2 = new Product;
+        $tabletteChocolat2->setName("Tablette de chocolat au lait")
+            ->setPrice(0)
+            ->setCategory($tablettesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/tablettes-tablette-chocolat-lait-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($tabletteChocolat2->getName())));
+
+        $manager->persist($tabletteChocolat2);
+
+        // Article - Tablette de chocolat
+        $tabletteChocolat3 = new Product;
+        $tabletteChocolat3->setName("Tablette de chocolat blanc")
+            ->setPrice(0)
+            ->setCategory($tablettesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/tablettes-tablette-chocolat-blanc-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($tabletteChocolat3->getName())));
+
+        $manager->persist($tabletteChocolat3);
+
+        // Article - Tablette de chocolat
+        $tabletteChocolat4 = new Product;
+        $tabletteChocolat4->setName("Tablette de chocolat noir sans sucres")
+            ->setPrice(0)
+            ->setCategory($tablettesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/tablettes-tablette-chocolat-noir-sans-sucres-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($tabletteChocolat4->getName())));
+
+        $manager->persist($tabletteChocolat4);
+
+        // Article - Moulages
+        $moulageChocolat1 = new Product;
+        $moulageChocolat1->setName("Sucette au chocolat noir")
+            ->setPrice(0)
+            ->setCategory($moulagesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/moulages-sucette-chocolat-noir-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($moulageChocolat1->getName())));
+
+        $imageMoulageChocolat1 = new Image();
+        $imageMoulageChocolat1->setUrl("https://www.ganacheetcabosse.com/_img/moulages-sucette-chocolat-noir-2.jpg")
+            ->setProduct($moulageChocolat1);
+        $manager->persist($imageMoulageChocolat1);
+
+        $manager->persist($moulageChocolat1);
+
+        // Article - Moulages
+        $moulageChocolat2 = new Product;
+        $moulageChocolat2->setName("Sucette au chocolat au lait")
+            ->setPrice(0)
+            ->setCategory($moulagesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/moulages-sucette-chocolat-lait-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($moulageChocolat2->getName())));
+
+        $imageMoulageChocolat2 = new Image();
+        $imageMoulageChocolat2->setUrl("https://www.ganacheetcabosse.com/_img/moulages-sucette-chocolat-lait-2.jpg")
+            ->setProduct($moulageChocolat2);
+        $manager->persist($imageMoulageChocolat2);
+
+        $manager->persist($moulageChocolat2);
+
+        // Article - Moulages
+        $moulageChocolat3 = new Product;
+        $moulageChocolat3->setName("Sucette au chocolat blanc")
+            ->setPrice(0)
+            ->setCategory($moulagesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/_img/moulages-sucette-chocolat-blanc-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($moulageChocolat3->getName())));
+
+        $imageMoulageChocolat3 = new Image();
+        $imageMoulageChocolat3->setUrl("https://www.ganacheetcabosse.com/_img/moulages-sucette-chocolat-blanc-2.jpg")
+            ->setProduct($moulageChocolat3);
+        $manager->persist($imageMoulageChocolat3);
+
+        $manager->persist($moulageChocolat3);
 
         $manager->flush();
     }

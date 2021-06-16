@@ -2,30 +2,21 @@
 
 {% block title %}
 	{{ category.name }}
-	| Ganache &amp; Cabosse
+	| Ganache &amp; Cabosse | Rethel
 {% endblock %}
 
 {% block body %}
 	<!-- intro -->
-	<section class="position-relative z-index-1" data-theme="light-1">
+	<section class="position-relative z-index-1" data-theme="dark-1">
 		<div class="container max-width-adaptive-lg padding-y-xl position-relative z-index-2">
 			<div class="text-center">
 				<h1 class="text-xxxl text-uppercase">{{ category.name }}</h1>
 			</div>
 		</div>
-
-		<figure class="bg-decoration-v2 z-index-1 blend-overlay flip-y" aria-hidden="true">
-			<svg class="bg-decoration-v2__svg color-contrast-higher opacity-30%" viewbox="0 0 1920 450" fill="none">
-				<g stroke="currentColor" stroke-width="2">
-					<path d="M1664 16H1466L1664 214V16Z"/>
-					<circle cx="1565" cy="115" r="59"/>
-				</g>
-			</svg>
-		</figure>
 	</section>
 
 	<!-- products -->
-	<section class="position-relative z-index-1 padding-top-xxl padding-bottom-xxl">
+	<section class="position-relative z-index-1 padding-top-lg padding-bottom-lg">
 		<div class="container max-width-adaptive-lg">
 			<div class="margin-bottom-md">
 				<nav class="breadcrumbs text-sm" aria-label="Breadcrumbs">
@@ -50,7 +41,7 @@
 					<div class="prod-card-v2">
 						<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
 							<figure class="media-wrapper media-wrapper--4:5">
-								<img src="assets/img/product-card-v2-img-1a.jpg" alt="Product preview image">
+								<img src="{{ p.mainPicture }}" alt="Product preview image">
 							</figure>
 						</a>
 

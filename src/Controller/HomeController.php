@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\CategoryRepository;
 use App\Repository\ProductRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,7 +14,11 @@ class HomeController extends AbstractController
      */
     public function homepage(ProductRepository $productRepository)
     {
-        $products = $productRepository->findBy([], [], 6);
+        $selection = ['framboisier', 'fraisier', 'foret-noire', 'multifruits'];
+
+        $products = $productRepository->findBy([
+            'slug' => $selection
+        ], ['slug' => 'DESC'], 4);
 
         return $this->render('home.html.twig', [
             'products' => $products
@@ -29,26 +34,18 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/gallery", name="gallery")
+     * @Route("/photos", name="photos")
      */
-    public function gallery()
+    public function photos()
     {
-        return $this->render('gallery.html.twig');
+        return $this->render('photos.html.twig');
     }
 
     /**
-     * @Route("/posts", name="posts")
+     * @Route("/mentions-legales", name="mentions_legales")
      */
-    public function posts()
+    public function mentions()
     {
-        return $this->render('posts.html.twig');
-    }
-
-    /**
-     * @Route("/chocolats", name="chocolats")
-     */
-    public function chocolats()
-    {
-        return $this->render('chocolats.html.twig');
+        return $this->render('mentions-legales.html.twig');
     }
 }

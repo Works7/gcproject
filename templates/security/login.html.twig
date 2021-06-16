@@ -4,19 +4,28 @@
 {% endblock %}
 
 {% block body %}
-	Connexion
+	<div class="container max-width-adaptive-lg margin-top-lg margin-bottom-lg">
+		<fieldset class="margin-bottom-md">
+			<legend class="form-legend">Connexion</legend>
+			{% if error %}
+				{{ error.message }}
+			{% endif %}
 
-	{% if error %}
-		<div class="alert-danger">
-			{{ error.message }}
-		</div>
-	{% endif %}
+			{{ form_start(formView) }}
 
-	{{ form_start(formView) }}
+			<div class="grid gap-sm">
+				{{ form_label(formView.email) }}
+				{{ form_widget(formView.email, {'attr': {'class': 'form-control width-100%'} }) }}
 
-	{{ form_widget(formView) }}
+				{{ form_label(formView.password) }}
+				{{ form_widget(formView.password, {'attr': {'class': 'form-control width-100%'} }) }}
+			</div>
 
-	<button type="submit">Connexion</button>
+			<div>
+				<button type="submit" class="btn btn--primary margin-top-md">Connexion</button>
+			</div>
 
-	{{ form_end(formView) }}
+			{{ form_end(formView) }}
+		</fieldset>
+	</div>
 {% endblock %}
