@@ -6,192 +6,193 @@
 
 {% block body %}
 	<!-- intro -->
-	<section class="intro intro--top-overlay position-relative z-index-1 bg-transparent margin-bottom-xxl" data-theme="dark-1" style="background-image: url('{{ asset('build/images/intro-img-1-gc.jpg') }}');">
+	<section class="intro intro--top-overlay position-relative z-index-1 bg-transparent margin-bottom-xxl" data-theme="dark-1" style="background-image: url('{{ asset('build/images/photo-intro.jpg') }}');">
 		<div class="container max-width-adaptive-lg padding-top-xxxl padding-bottom-lg">
 			<div
 				class="max-width-xs ie:bg ie:padding-md">
 				{# <div class="text-sm opacity-60% margin-bottom-xxs reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="0">Label</div> #}
 				<div class="text-component margin-bottom-lg reveal-fx reveal-fx--translate-up" data-reveal-fx-delay="100" data-reveal-fx-delta="0">
-					<h1 class="text-xxxxl text-uppercase">GANACHE
-						<em>&amp;</em>&nbsp;CABOSSE</h1>
-					<p>Pâtisserie Chocolaterie / Rethel</p>
+					<h1 class="text-xxxxl text-uppercase">Fêtes des Pères</h1>
+					<p>Entremet chocolat noisette</p>
 				</div>
-				{# <div class="flex flex-wrap items-center gap-sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delay="200" data-reveal-fx-delta="0"><a href="#" class="btn btn--subtle">Shop Now</a> #}
+				<div class="flex flex-wrap items-center gap-sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delay="200" data-reveal-fx-delta="0">
+					<a href="/patisserie/entremet-chocolat-noisette" class="btn btn--subtle">Découvrir</a>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<!-- latest products -->
-<section class="position-relative z-index-1 margin-bottom-xxl">
-	<div class="container max-width-adaptive-md margin-bottom-xl">
-		<div class="grid gap-sm">
-			<div class="margin-bottom-md@lg">
-				<h1 class="text-xxl text-uppercase color-primary">Notre sélection</h1>
+	<!-- latest products -->
+	<section class="position-relative z-index-1 margin-bottom-xxl">
+		<div class="container max-width-adaptive-md margin-bottom-xl">
+			<div class="grid gap-sm">
+				<div class="margin-bottom-md@lg">
+					<h1 class="text-xxl text-uppercase color-primary">Notre sélection</h1>
+				</div>
+
+				{# <div class="offset-4@lg">
+																																																																																																																																																			<p class="line-height-lg color-contrast-high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam id deleniti quo dolorum placeat, hic dolores animi molestias similique ratione, aut, cupiditate praesentium.</p>
+																																																																																																																																																		</div> #}
 			</div>
-
-			{# <div class="offset-4@lg">
-																<p class="line-height-lg color-contrast-high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam id deleniti quo dolorum placeat, hic dolores animi molestias similique ratione, aut, cupiditate praesentium.</p>
-															</div> #}
 		</div>
-	</div>
 
-	<div class="overflow-hidden reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="50">
-		<div class="carousel carousel-v3 flex flex-column container max-width-md js-carousel" data-drag="on" data-loop="off" data-overflow-items="on" data-align-controls=".prod-card-v2__img-link">
-			<p class="sr-only">Carousel items</p>
+		<div class="overflow-hidden reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="50">
+			<div class="carousel carousel-v3 flex flex-column container max-width-md js-carousel" data-drag="on" data-loop="off" data-overflow-items="on" data-align-controls=".prod-card-v2__img-link">
+				<p class="sr-only">Carousel items</p>
 
-			<div class="carousel__wrapper position-relative">
-				<ol class="carousel__list">
-					{% for p in products %}
-						<li class="carousel__item">
-							<div class="prod-card-v2">
-								<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
-									<figure class="media-wrapper media-wrapper--4:5">
-										<img src="{{ p.mainPicture }}" alt="Product preview image">
-									</figure>
-								</a>
+				<div class="carousel__wrapper position-relative">
+					<ol class="carousel__list">
+						{% for p in products %}
+							<li class="carousel__item">
+								<div class="prod-card-v2">
+									<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
+										<figure class="media-wrapper media-wrapper--4:5">
+											<img src="{{ p.mainPicture }}" alt="Product preview image">
+										</figure>
+									</a>
 
-								<div class="padding-sm text-center">
-									<h2 class="text-md font-primary">
-										<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="product-card-v2__title">{{ p.name }}</a>
-									</h2>
+									<div class="padding-sm text-center">
+										<h2 class="text-md font-primary">
+											<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="product-card-v2__title">{{ p.name }}</a>
+										</h2>
+									</div>
 								</div>
-							</div>
-						</li>
-					{% endfor %}
-				</ol>
+							</li>
+						{% endfor %}
+					</ol>
 
-				<nav class="no-js:is-hidden">
-					<ul class="position-absolute top-0 left-0 bottom-0 right-0 pointer-events-none flex items-center justify-between">
-						<li>
-							<button class="reset carousel-v3__control carousel-v3__control--prev js-carousel__control js-tab-focus">
-								<svg class="icon icon--xs" viewbox="0 0 16 16">
-									<title>Précédent</title>
-									<g>
-										<path d="M10.892,16.41L4.241,8.65c-0.321-0.374-0.321-0.927,0-1.301l6.651-7.76l1.519,1.302L6.317,8l6.093,7.108 L10.892,16.41z"></path>
-									</g>
-								</svg>
-							</button>
-						</li>
+					<nav class="no-js:is-hidden">
+						<ul class="position-absolute top-0 left-0 bottom-0 right-0 pointer-events-none flex items-center justify-between">
+							<li>
+								<button class="reset carousel-v3__control carousel-v3__control--prev js-carousel__control js-tab-focus">
+									<svg class="icon icon--xs" viewbox="0 0 16 16">
+										<title>Précédent</title>
+										<g>
+											<path d="M10.892,16.41L4.241,8.65c-0.321-0.374-0.321-0.927,0-1.301l6.651-7.76l1.519,1.302L6.317,8l6.093,7.108 L10.892,16.41z"></path>
+										</g>
+									</svg>
+								</button>
+							</li>
 
-						<li>
-							<button class="reset carousel-v3__control carousel-v3__control--next js-carousel__control js-tab-focus">
-								<svg class="icon icon--xs" viewbox="0 0 16 16">
-									<title>Suivant</title>
-									<g>
-										<path d="M5.108,16.41L3.59,15.108L9.683,8L3.59,0.892L5.108-0.41l6.651,7.76c0.321,0.374,0.321,0.927,0,1.301 L5.108,16.41z"></path>
-									</g>
-								</svg>
-							</button>
-						</li>
-					</ul>
-				</nav>
+							<li>
+								<button class="reset carousel-v3__control carousel-v3__control--next js-carousel__control js-tab-focus">
+									<svg class="icon icon--xs" viewbox="0 0 16 16">
+										<title>Suivant</title>
+										<g>
+											<path d="M5.108,16.41L3.59,15.108L9.683,8L3.59,0.892L5.108-0.41l6.651,7.76c0.321,0.374,0.321,0.927,0,1.301 L5.108,16.41z"></path>
+										</g>
+									</svg>
+								</button>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<!-- shop main categories -->
-<section class="feature-v10">
-	<div class="container max-width-adaptive-sm">
-		<div class="text-component text-center">
-			<h1 class="text-xxl text-uppercase color-primary">Nos produits</h1>
+	<!-- shop main categories -->
+	<section class="feature-v10">
+		<div class="container max-width-adaptive-sm">
+			<div class="text-component text-center">
+				<h1 class="text-xxl text-uppercase color-primary">Nos produits</h1>
+			</div>
 		</div>
-	</div>
 
-	<div class="padding-y-xl padding-top-xl@md padding-bottom-0@md">
-		<div class="container max-width-adaptive-lg">
-			<div class="grid">
-				<figure class="col-6@md reveal-fx reveal-fx--clip-y">
-					<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-patisseries.jpg') }}" loading="lazy" alt="Image description">
-				</figure>
+		<div class="padding-y-xl padding-top-xl@md padding-bottom-0@md">
+			<div class="container max-width-adaptive-lg">
+				<div class="grid">
+					<figure class="col-6@md reveal-fx reveal-fx--clip-y">
+						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-patisseries.jpg') }}" loading="lazy" alt="Image description">
+					</figure>
 
-				<div class="bg-contrast-lower col-6@md">
-					<div class="text-component v-space-md height-100% flex flex-column padding-md">
-						<h2>Pâtisseries</h2>
-						<p class="margin-top-auto">
-							<a href="{{ path('product_category', {'slug' : 'patisseries'}) }}" class="feature-v10__link">
-								<i>Découvrir</i>
-							</a>
-						</p>
+					<div class="bg-contrast-lower col-6@md">
+						<div class="text-component v-space-md height-100% flex flex-column padding-md">
+							<h2>Pâtisseries</h2>
+							<p class="margin-top-auto">
+								<a href="{{ path('product_category', {'slug' : 'patisseries'}) }}" class="feature-v10__link">
+									<i>Découvrir</i>
+								</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="padding-y-xl padding-bottom-0@md padding-top-0@md" data-theme="dark-1">
-		<div class="container max-width-adaptive-lg">
-			<div class="grid">
-				<figure class="col-6@sm order-2@sm reveal-fx reveal-fx--clip-y">
-					<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-chocolats.jpg') }}" loading="lazy" alt="Image description">
-				</figure>
+		<div class="padding-y-xl padding-bottom-0@md padding-top-0@md" data-theme="dark-1">
+			<div class="container max-width-adaptive-lg">
+				<div class="grid">
+					<figure class="col-6@sm order-2@sm reveal-fx reveal-fx--clip-y">
+						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-chocolats.jpg') }}" loading="lazy" alt="Image description">
+					</figure>
 
-				<div class="bg-contrast-lower col-6@md order-1@md">
-					<div class="text-component v-space-md height-100% flex flex-column padding-md">
-						<h2>Chocolats</h2>
-						<p class="margin-top-auto">
-							<a href="/chocolats" class="feature-v10__link">
-								<i>Découvrir</i>
-							</a>
-						</p>
+					<div class="bg-contrast-lower col-6@md order-1@md">
+						<div class="text-component v-space-md height-100% flex flex-column padding-md">
+							<h2>Chocolats</h2>
+							<p class="margin-top-auto">
+								<a href="/chocolats" class="feature-v10__link">
+									<i>Découvrir</i>
+								</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="padding-y-xl padding-top-0@md padding-bottom-xl@md">
-		<div class="container max-width-adaptive-lg">
-			<div class="grid">
-				<figure class="col-6@md reveal-fx reveal-fx--clip-y">
-					<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-macarons.jpg') }}" loading="lazy" alt="Image description">
-				</figure>
+		<div class="padding-y-xl padding-top-0@md padding-bottom-xl@md">
+			<div class="container max-width-adaptive-lg">
+				<div class="grid">
+					<figure class="col-6@md reveal-fx reveal-fx--clip-y">
+						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-macarons.jpg') }}" loading="lazy" alt="Image description">
+					</figure>
 
-				<div class="bg-contrast-lower col-6@md">
-					<div class="text-component v-space-md height-100% flex flex-column padding-md">
-						<h2>Macarons</h2>
-						<p class="margin-top-auto">
-							<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="feature-v10__link">
-								<i>Découvrir</i>
-							</a>
-						</p>
+					<div class="bg-contrast-lower col-6@md">
+						<div class="text-component v-space-md height-100% flex flex-column padding-md">
+							<h2>Macarons</h2>
+							<p class="margin-top-auto">
+								<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="feature-v10__link">
+									<i>Découvrir</i>
+								</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<!-- stores -->
-<section class="feature-v8 padding-bottom-lg bg-transparent">
-	<div class="feature-v8__main-content bg-contrast-lower padding-top-xxl margin-top-x">
+	<!-- stores -->
+	<section class="feature-v8 padding-bottom-lg bg-transparent">
+		<div class="feature-v8__main-content bg-contrast-lower padding-top-xxl margin-top-x">
+			<div class="container max-width-adaptive-md">
+				<div class="grid gap-sm gap-lg@sm">
+					<div class="text-component col-6@sm">
+						<h1 class="text-xxl text-uppercase color-primary">Notre boutique</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="container max-width-adaptive-md">
-			<div class="grid gap-sm gap-lg@sm">
-				<div class="text-component col-6@sm">
-					<h1 class="text-xxl text-uppercase color-primary">Notre boutique</h1>
-				</div>
-			</div>
+			<ul class="feature-v8__sub-content grid gap-lg">
+				<li class="col-6@sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="100">
+					<a href="#0" class="card-v8 bg" data-theme="default">
+						<figure>
+							<img src="{{ asset('build/images/accueil-boutique-1.jpg') }}" loading="lazy" alt="Image description">
+						</figure>
+					</a>
+				</li>
+
+				<li class="col-6@sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="100" data-reveal-fx-delay="100">
+					<a href="#0" class="card-v8 bg" data-theme="default">
+						<figure>
+							<img src="{{ asset('build/images/accueil-boutique-2.jpg') }}" loading="lazy" alt="Image description">
+						</figure>
+					</a>
+				</li>
+			</ul>
 		</div>
-	</div>
-
-	<div class="container max-width-adaptive-md">
-		<ul class="feature-v8__sub-content grid gap-lg">
-			<li class="col-6@sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="100">
-				<a href="#0" class="card-v8 bg" data-theme="default">
-					<figure>
-						<img src="{{ asset('build/images/accueil-boutique-1.jpg') }}" loading="lazy" alt="Image description">
-					</figure>
-				</a>
-			</li>
-
-			<li class="col-6@sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="100" data-reveal-fx-delay="100">
-				<a href="#0" class="card-v8 bg" data-theme="default">
-					<figure>
-						<img src="{{ asset('build/images/accueil-boutique-2.jpg') }}" loading="lazy" alt="Image description">
-					</figure>
-				</a>
-			</li>
-		</ul>
-	</div>
-</section>{% endblock %}
+	</section>
+{% endblock %}

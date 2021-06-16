@@ -258,15 +258,31 @@ class AppFixtures extends Fixture
             ->setPrice(0)
             ->setCategory($patisseries)
             ->setDetails("")
-            ->setMainPicture("https://www.ganacheetcabosse.com/_img/patisseries-tarte-framboise-1.jpg")
+            ->setMainPicture("https://www.ganacheetcabosse.com/images/patisseries-tarte-framboise-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($patisserie12->getName())));
 
         $imagePatisserie12 = new Image();
-        $imagePatisserie12->setUrl("https://www.ganacheetcabosse.com/_img/patisseries-tarte-framboise-2.jpg")
+        $imagePatisserie12->setUrl("https://www.ganacheetcabosse.com/images/patisseries-tarte-framboise-2.jpg")
             ->setProduct($patisserie12);
         $manager->persist($imagePatisserie12);
 
         $manager->persist($patisserie12);
+
+        // Article - Pâtisserie
+        $patisserie13 = new Product;
+        $patisserie13->setName("Entremet Chocolat Noisette")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("Génoise chocolat, croustillant praliné noisette, mousse chocolat noir, glaçage cacaoté parsemé d'éclats de spéculoos")
+            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-chocolat-noisette-2.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie13->getName())));
+
+        $imagePatisserie13 = new Image();
+        $imagePatisserie13->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-chocolat-noisette-2.jpg")
+            ->setProduct($patisserie13);
+        $manager->persist($imagePatisserie13);
+
+        $manager->persist($patisserie13);
 
         // Article - Macaron
         $macaron1 = new Product;
