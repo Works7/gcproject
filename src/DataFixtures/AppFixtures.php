@@ -458,7 +458,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat1 = new Product;
-        $bonbonChocolat1->setName("Rectangle Rayé Uni Noir / Lait")
+        $bonbonChocolat1->setName("Rectangle Rayé Uni")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes)")
@@ -474,7 +474,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat2 = new Product;
-        $bonbonChocolat2->setName("Rond Uni Noir / Lait")
+        $bonbonChocolat2->setName("Rond Uni")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, praliné amandes noisettes, grué de cacao")
@@ -490,7 +490,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat3 = new Product;
-        $bonbonChocolat3->setName("Rectangle Contour Noir / Lait")
+        $bonbonChocolat3->setName("Rectangle Contour")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, praliné amandes, amandes entières")
@@ -506,7 +506,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat4 = new Product;
-        $bonbonChocolat4->setName("Sanglier Noir / Lait")
+        $bonbonChocolat4->setName("Sanglier")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes)")
@@ -522,7 +522,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat5 = new Product;
-        $bonbonChocolat5->setName("Rectangle Uni Noir / Lait")
+        $bonbonChocolat5->setName("Rectangle Uni")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, praliné, pâte de cacahuètes")
@@ -538,7 +538,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat6 = new Product;
-        $bonbonChocolat6->setName("Rond Cerclé Noir / Lait")
+        $bonbonChocolat6->setName("Rond Cerclé")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, praliné amandes")
@@ -554,7 +554,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat7 = new Product;
-        $bonbonChocolat7->setName("Carré Contour Noir / Lait")
+        $bonbonChocolat7->setName("Carré Contour")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, praliné pistache")
@@ -586,7 +586,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat9 = new Product;
-        $bonbonChocolat9->setName("Carré Uni Noir / Lait")
+        $bonbonChocolat9->setName("Carré Uni")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, praliné noisettes, noisettes grillées hachées")
@@ -602,7 +602,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat10 = new Product;
-        $bonbonChocolat10->setName("Rectangle Multi Reliefs Noir / Lait")
+        $bonbonChocolat10->setName("Rectangle Multi Reliefs")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes), croustillant feuilleté")
@@ -618,7 +618,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat11 = new Product;
-        $bonbonChocolat11->setName("Rond Rayé Noir / Lait")
+        $bonbonChocolat11->setName("Rond Rayé")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, pâte d’amande 55%")
