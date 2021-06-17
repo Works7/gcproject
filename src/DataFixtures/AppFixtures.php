@@ -249,7 +249,7 @@ class AppFixtures extends Fixture
             ->setCategory($patisseries)
             ->setDetails("")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-tarte-fraise-1.jpg")
-            ->setSlug(strtolower($this->slugger->slug($patisserie10->getName())));
+            ->setSlug(strtolower($this->slugger->slug($patisserie11->getName())));
 
         $imagePatisserie11 = new Image();
         $imagePatisserie11->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-tarte-fraise-2.jpg")
@@ -686,6 +686,17 @@ class AppFixtures extends Fixture
             ->setSlug(strtolower($this->slugger->slug($specialiteChocolat4->getName())));
 
         $manager->persist($specialiteChocolat4);
+
+        // Article - Spécialité
+        $specialiteChocolat5 = new Product;
+        $specialiteChocolat5->setName("Orangettes")
+            ->setPrice(0)
+            ->setCategory($specialitesChocolat)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/specialites-chocolat-orangettes-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($specialiteChocolat5->getName())));
+
+        $manager->persist($specialiteChocolat5);
 
         // Article - Tablette de chocolat
         $tabletteChocolat1 = new Product;
