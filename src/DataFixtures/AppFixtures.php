@@ -639,7 +639,7 @@ class AppFixtures extends Fixture
             ->setCategory($feteDesPeres)
             ->setDetails("")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/fete-des-peres-assortiment-bonbons.jpg")
-            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat11->getName())));
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat12->getName())));
 
         $manager->persist($bonbonChocolat12);
 
