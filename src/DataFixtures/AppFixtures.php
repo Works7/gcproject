@@ -91,6 +91,11 @@ class AppFixtures extends Fixture
             ->setProduct($patisserie1);
         $manager->persist($imagePatisserie1);
 
+        $imagePatisserie12 = new Image();
+        $imagePatisserie12->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-3-chocolats-3.jpg")
+            ->setProduct($patisserie1);
+        $manager->persist($imagePatisserie12);
+
         $manager->persist($patisserie1);
 
         // Article - Pâtisserie
@@ -283,10 +288,15 @@ class AppFixtures extends Fixture
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-chocolat-noisette-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($patisserie13->getName())));
 
-        $imagePatisserie13 = new Image();
-        $imagePatisserie13->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-chocolat-noisette-2.jpg")
+        $imagePatisserie131 = new Image();
+        $imagePatisserie131->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-chocolat-noisette-2.jpg")
             ->setProduct($patisserie13);
-        $manager->persist($imagePatisserie13);
+        $manager->persist($imagePatisserie131);
+
+        $imagePatisserie132 = new Image();
+        $imagePatisserie132->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-chocolat-noisette-3.jpg")
+            ->setProduct($patisserie13);
+        $manager->persist($imagePatisserie132);
 
         $manager->persist($patisserie13);
 
@@ -305,6 +315,54 @@ class AppFixtures extends Fixture
         $manager->persist($imagePatisserie14);
 
         $manager->persist($patisserie14);
+
+        // Article - Pâtisserie
+        $patisserie15 = new Product;
+        $patisserie15->setName("Éclair à la vanille")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-eclair-vanille-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie15->getName())));
+
+        $imagePatisserie15 = new Image();
+        $imagePatisserie15->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-eclair-vanille-2.jpg")
+            ->setProduct($patisserie15);
+        $manager->persist($imagePatisserie15);
+
+        $manager->persist($patisserie15);
+
+        // Article - Pâtisserie
+        $patisserie16 = new Product;
+        $patisserie16->setName("Éclair au chocolat")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-eclair-chocolat-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie16->getName())));
+
+        $imagePatisserie16 = new Image();
+        $imagePatisserie16->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-eclair-chocolat-2.jpg")
+            ->setProduct($patisserie16);
+        $manager->persist($imagePatisserie16);
+
+        $manager->persist($patisserie16);
+
+        // Article - Pâtisserie
+        $patisserie17 = new Product;
+        $patisserie17->setName("Éclair au café")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-eclair-cafe-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie17->getName())));
+
+        $imagePatisserie17 = new Image();
+        $imagePatisserie17->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-eclair-cafe-2.jpg")
+            ->setProduct($patisserie17);
+        $manager->persist($imagePatisserie17);
+
+        $manager->persist($patisserie17);
 
         // Article - Macaron
         $macaron1 = new Product;
@@ -388,7 +446,7 @@ class AppFixtures extends Fixture
 
         // Article - Macaron
         $macaron6 = new Product;
-        $macaron6->setName("Macaron Chocolat")
+        $macaron6->setName("Macaron Framboise")
             ->setPrice(0)
             ->setCategory($macarons)
             ->setDetails("")
@@ -642,6 +700,22 @@ class AppFixtures extends Fixture
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat12->getName())));
 
         $manager->persist($bonbonChocolat12);
+
+        // Article - Bonbons de chocolat
+        $bonbonChocolat13 = new Product;
+        $bonbonChocolat13->setName("Composition")
+            ->setPrice(0)
+            ->setCategory($feteDesPeres)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/fete-des-peres-composition-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat13->getName())));
+
+        $imageBonbonChocolat13 = new Image();
+        $imageBonbonChocolat13->setUrl("https://www.ganacheetcabosse.com/build/images/fete-des-peres-composition-2.jpg")
+            ->setProduct($bonbonChocolat13);
+        $manager->persist($imageBonbonChocolat13);
+
+        $manager->persist($bonbonChocolat13);
 
         // Article - Spécialité
         $specialiteChocolat1 = new Product;
