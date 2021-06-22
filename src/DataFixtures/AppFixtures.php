@@ -295,20 +295,20 @@ class AppFixtures extends Fixture
         $manager->persist($patisserie13);
 
         // Article - Pâtisserie
-        $patisserie14 = new Product;
-        $patisserie14->setName("Saint-Honoré")
+        $patisserie18 = new Product;
+        $patisserie18->setName("Saint-Honoré")
             ->setPrice(0)
             ->setCategory($patisseries)
             ->setDetails("")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-saint-honore-1.jpg")
-            ->setSlug(strtolower($this->slugger->slug($patisserie14->getName())));
+            ->setSlug(strtolower($this->slugger->slug($patisserie18->getName())));
 
-        $imagePatisserie14 = new Image();
-        $imagePatisserie14->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-saint-honore-2.jpg")
-            ->setProduct($patisserie14);
-        $manager->persist($imagePatisserie14);
+        $imagePatisserie18 = new Image();
+        $imagePatisserie18->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-saint-honore-2.jpg")
+            ->setProduct($patisserie18);
+        $manager->persist($imagePatisserie18);
 
-        $manager->persist($patisserie14);
+        $manager->persist($patisserie18);
 
         // Article - Pâtisserie
         $patisserie14 = new Product;
