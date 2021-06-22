@@ -71,12 +71,6 @@ class AppFixtures extends Fixture
             ->setSlug(strtolower($this->slugger->slug($moulagesChocolat->getName())));
         $manager->persist($moulagesChocolat);
 
-        // Catégorie - Fête des Pères
-        $feteDesPeres = new Category;
-        $feteDesPeres->setName("Fête des Pères")
-            ->setSlug(strtolower($this->slugger->slug($feteDesPeres->getName())));
-        $manager->persist($feteDesPeres);
-
         // Article - Pâtisserie
         $patisserie1 = new Product;
         $patisserie1->setName("3 Chocolats")
@@ -283,7 +277,7 @@ class AppFixtures extends Fixture
         $patisserie13 = new Product;
         $patisserie13->setName("Entremet Chocolat Noisette")
             ->setPrice(0)
-            ->setCategory($feteDesPeres)
+            ->setCategory($patisseries)
             ->setDetails("Génoise chocolat, croustillant praliné noisette, mousse chocolat noir, glaçage cacaoté parsemé d'éclats de spéculoos")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-chocolat-noisette-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($patisserie13->getName())));
@@ -299,6 +293,22 @@ class AppFixtures extends Fixture
         $manager->persist($imagePatisserie132);
 
         $manager->persist($patisserie13);
+
+        // Article - Pâtisserie
+        $patisserie14 = new Product;
+        $patisserie14->setName("Saint-Honoré")
+            ->setPrice(0)
+            ->setCategory($patisseries)
+            ->setDetails("")
+            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/patisseries-saint-honore-1.jpg")
+            ->setSlug(strtolower($this->slugger->slug($patisserie14->getName())));
+
+        $imagePatisserie14 = new Image();
+        $imagePatisserie14->setUrl("https://www.ganacheetcabosse.com/build/images/patisseries-saint-honore-2.jpg")
+            ->setProduct($patisserie14);
+        $manager->persist($imagePatisserie14);
+
+        $manager->persist($patisserie14);
 
         // Article - Pâtisserie
         $patisserie14 = new Product;
@@ -516,7 +526,7 @@ class AppFixtures extends Fixture
 
         // Article - Bonbons de chocolat
         $bonbonChocolat1 = new Product;
-        $bonbonChocolat1->setName("Rectangle Rayé Uni")
+        $bonbonChocolat1->setName("Rectangle Rayé")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
             ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes)")
@@ -626,22 +636,6 @@ class AppFixtures extends Fixture
 
         $manager->persist($bonbonChocolat7);
 
-        // // Article - Bonbons de chocolat
-        // $bonbonChocolat8 = new Product;
-        // $bonbonChocolat8->setName("Ruche Spirale Noir / Lait")
-        //     ->setPrice(0)
-        //     ->setCategory($bonbonsChocolat)
-        //     ->setDetails("Chocolat noir, lait, miel de fleurs des Ardennes")
-        //     ->setMainPicture("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ruche-spirale-1.jpg")
-        //     ->setSlug(strtolower($this->slugger->slug($bonbonChocolat8->getName())));
-
-        // $imageBonbonChocolat8 = new Image();
-        // $imageBonbonChocolat8->setUrl("https://www.ganacheetcabosse.com/_img/bonbons-chocolat-ballotin-1.jpg")
-        //     ->setProduct($bonbonChocolat8);
-        // $manager->persist($imageBonbonChocolat8);
-
-        // $manager->persist($bonbonChocolat8);
-
         // Article - Bonbons de chocolat
         $bonbonChocolat9 = new Product;
         $bonbonChocolat9->setName("Carré Uni")
@@ -689,33 +683,6 @@ class AppFixtures extends Fixture
         $manager->persist($imageBonbonChocolat11);
 
         $manager->persist($bonbonChocolat11);
-
-        // Article - Bonbons de chocolat
-        $bonbonChocolat12 = new Product;
-        $bonbonChocolat12->setName("Assortiment de bonbons de chocolat")
-            ->setPrice(0)
-            ->setCategory($feteDesPeres)
-            ->setDetails("")
-            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/fete-des-peres-assortiment-bonbons.jpg")
-            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat12->getName())));
-
-        $manager->persist($bonbonChocolat12);
-
-        // Article - Bonbons de chocolat
-        $bonbonChocolat13 = new Product;
-        $bonbonChocolat13->setName("Composition")
-            ->setPrice(0)
-            ->setCategory($feteDesPeres)
-            ->setDetails("")
-            ->setMainPicture("https://www.ganacheetcabosse.com/build/images/fete-des-peres-composition-1.jpg")
-            ->setSlug(strtolower($this->slugger->slug($bonbonChocolat13->getName())));
-
-        $imageBonbonChocolat13 = new Image();
-        $imageBonbonChocolat13->setUrl("https://www.ganacheetcabosse.com/build/images/fete-des-peres-composition-2.jpg")
-            ->setProduct($bonbonChocolat13);
-        $manager->persist($imageBonbonChocolat13);
-
-        $manager->persist($bonbonChocolat13);
 
         // Article - Spécialité
         $specialiteChocolat1 = new Product;
