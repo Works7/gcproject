@@ -11,7 +11,7 @@
 			<div class="max-width-xs ie:bg ie:padding-md">
 				<div class="text-sm opacity-60% margin-bottom-xxs reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="0">&nbsp;</div>
 				<div class="text-component margin-bottom-lg reveal-fx reveal-fx--translate-up" data-reveal-fx-delay="100" data-reveal-fx-delta="0">
-					<h1 class="text-xxxxl text-uppercase">&nbsp;</h1>
+					<h1 class="text-xxxxl text-uppercase">Ganache &amp; Cabosse</h1>
 				</div>
 				<div class="flex flex-wrap items-center gap-sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delay="200" data-reveal-fx-delta="0">
 					<a href="" class="btn btn--disabled">&nbsp;</a>
@@ -29,8 +29,8 @@
 				</div>
 
 				{# <div class="offset-4@lg">
-																																																																																																																																																																																																																																											<p class="line-height-lg color-contrast-high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam id deleniti quo dolorum placeat, hic dolores animi molestias similique ratione, aut, cupiditate praesentium.</p>
-																																																																																																																																																																																																																																										</div> #}
+																																																																																																																																																																																																																																																																																																																			<p class="line-height-lg color-contrast-high">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsam id deleniti quo dolorum placeat, hic dolores animi molestias similique ratione, aut, cupiditate praesentium.</p>
+																																																																																																																																																																																																																																																																																																																		</div> #}
 			</div>
 		</div>
 
@@ -45,7 +45,7 @@
 								<div class="prod-card-v2">
 									<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="{{ p.mainPicture }}" alt="Product preview image">
+											<img src="{{ p.mainPicture }}" alt="Sélection | {{ p.name }} | Ganache &amp; Cabosse">
 										</figure>
 									</a>
 
@@ -101,7 +101,7 @@
 			<div class="container max-width-adaptive-lg">
 				<div class="grid">
 					<figure class="col-6@md reveal-fx reveal-fx--clip-y">
-						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-patisseries.jpg') }}" loading="lazy" alt="Image description">
+						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-patisseries.jpg') }}" loading="lazy" alt="Nos pâtisseries | Ganache &amp; Cabosse">
 					</figure>
 
 					<div class="bg-contrast-lower col-6@md">
@@ -122,7 +122,7 @@
 			<div class="container max-width-adaptive-lg">
 				<div class="grid">
 					<figure class="col-6@sm order-2@sm reveal-fx reveal-fx--clip-y">
-						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-chocolats.jpg') }}" loading="lazy" alt="Image description">
+						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-chocolats.jpg') }}" loading="lazy" alt="Nos chocolats | Ganache &amp; Cabosse">
 					</figure>
 
 					<div class="bg-contrast-lower col-6@md order-1@md">
@@ -143,7 +143,7 @@
 			<div class="container max-width-adaptive-lg">
 				<div class="grid">
 					<figure class="col-6@md reveal-fx reveal-fx--clip-y">
-						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-macarons.jpg') }}" loading="lazy" alt="Image description">
+						<img class="block width-100% height-100% object-cover" src="{{ asset('build/images/accueil-macarons.jpg') }}" loading="lazy" alt="Nos macarons | Ganache &amp; Cabosse">
 					</figure>
 
 					<div class="bg-contrast-lower col-6@md">
@@ -178,7 +178,7 @@
 				<li class="col-6@sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="100">
 					<a href="#0" class="card-v8 bg" data-theme="default">
 						<figure>
-							<img src="{{ asset('build/images/accueil-boutique-1.jpg') }}" loading="lazy" alt="Image description">
+							<img src="{{ asset('build/images/accueil-boutique-1.jpg') }}" loading="lazy" alt="Boutique | Ganache &amp; Cabosse">
 						</figure>
 					</a>
 				</li>
@@ -186,11 +186,15 @@
 				<li class="col-6@sm reveal-fx reveal-fx--translate-up" data-reveal-fx-delta="100" data-reveal-fx-delay="100">
 					<a href="#0" class="card-v8 bg" data-theme="default">
 						<figure>
-							<img src="{{ asset('build/images/accueil-boutique-2.jpg') }}" loading="lazy" alt="Image description">
+							<img src="{{ asset('build/images/accueil-boutique-2.jpg') }}" loading="lazy" alt="Boutique | Ganache &amp; Cabosse">
 						</figure>
 					</a>
 				</li>
 			</ul>
 		</div>
 	</section>
+{% endblock %}
+
+{% block footer %}
+	{% include '_partials/footer-leader.html.twig' %}
 {% endblock %}

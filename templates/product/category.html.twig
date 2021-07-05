@@ -41,7 +41,7 @@
 					<div class="prod-card-v2">
 						<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
 							<figure class="media-wrapper media-wrapper--4:5">
-								<img src="{{ p.mainPicture }}" alt="Product preview image">
+								<img src="{{ p.mainPicture }}" alt="{{ category.name }} | {{ p.name }} | Ganache &amp; Cabosse">
 							</figure>
 						</a>
 
@@ -54,5 +54,9 @@
 				</li>
 			{% endfor %}
 		</ul>
-	</div>
-</section>{% endblock %}
+	</section>
+{% endblock %}
+
+{% block footer %}
+	{% include '_partials/footer.html.twig' %}
+{% endblock %}

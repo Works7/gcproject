@@ -61,6 +61,11 @@ class Product
      */
     private $images;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $mentions;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -169,6 +174,18 @@ class Product
                 $image->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getMentions(): ?string
+    {
+        return $this->mentions;
+    }
+
+    public function setMentions(?string $mentions): self
+    {
+        $this->mentions = $mentions;
 
         return $this;
     }

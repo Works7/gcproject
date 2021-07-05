@@ -529,12 +529,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat1->setName("Rectangle Rayé")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes)")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Praliné amande et noix de coco")
+            ->setMentions("Lait, soja, fruits à coque. Présence possible de : gluten, oeuf")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rectangle-raye-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat1->getName())));
 
         $imageBonbonChocolat1 = new Image();
-        $imageBonbonChocolat1->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat1->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rectangle-raye-2.jpg")
             ->setProduct($bonbonChocolat1);
         $manager->persist($imageBonbonChocolat1);
 
@@ -545,12 +546,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat2->setName("Rond Uni")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, praliné amandes noisettes, grué de cacao")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Praliné amande noisette, grué de cacao")
+            ->setMentions("Lait, soja, fruits à coque. Présence possible de : gluten, oeuf")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rond-uni-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat2->getName())));
 
         $imageBonbonChocolat2 = new Image();
-        $imageBonbonChocolat2->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat2->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rond-uni-2.jpg")
             ->setProduct($bonbonChocolat2);
         $manager->persist($imageBonbonChocolat2);
 
@@ -561,12 +563,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat3->setName("Rectangle Contour")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, praliné amandes, amandes entières")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Praliné amande, amande entière")
+            ->setMentions("Lait, soja, fruits à coque. Présence possible de : gluten, oeuf")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rectangle-contour-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat3->getName())));
 
         $imageBonbonChocolat3 = new Image();
-        $imageBonbonChocolat3->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat3->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rectangle-contour-2.jpg")
             ->setProduct($bonbonChocolat3);
         $manager->persist($imageBonbonChocolat3);
 
@@ -577,12 +580,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat4->setName("Sanglier")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes)")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Pâte de noisettes")
+            ->setMentions("Lait, soja, fruits à coque")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-sanglier-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat4->getName())));
 
         $imageBonbonChocolat4 = new Image();
-        $imageBonbonChocolat4->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat4->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-sanglier-2.jpg")
             ->setProduct($bonbonChocolat4);
         $manager->persist($imageBonbonChocolat4);
 
@@ -593,12 +597,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat5->setName("Rectangle Uni")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, praliné, pâte de cacahuètes")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Pâte de cacahuètes")
+            ->setMentions("Lait, soja, arachides. Présence possible de : fruits à coque")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rectangle-uni-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat5->getName())));
 
         $imageBonbonChocolat5 = new Image();
-        $imageBonbonChocolat5->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat5->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rectangle-uni-2.jpg")
             ->setProduct($bonbonChocolat5);
         $manager->persist($imageBonbonChocolat5);
 
@@ -609,12 +614,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat6->setName("Rond Cerclé")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, praliné amandes")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Praliné pécan")
+            ->setMentions("Lait, soja, fruits à coque. Présence possible de : gluten, oeuf")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rond-cercle-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat6->getName())));
 
         $imageBonbonChocolat6 = new Image();
-        $imageBonbonChocolat6->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat6->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rond-cercle-2.jpg")
             ->setProduct($bonbonChocolat6);
         $manager->persist($imageBonbonChocolat6);
 
@@ -625,12 +631,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat7->setName("Carré Contour")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, praliné pistache")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Praliné pistache")
+            ->setMentions("Lait, soja, fruits à coque. Présence possible de : gluten, oeuf")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-carre-contour-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat7->getName())));
 
         $imageBonbonChocolat7 = new Image();
-        $imageBonbonChocolat7->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat7->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-carre-contour-2.jpg")
             ->setProduct($bonbonChocolat7);
         $manager->persist($imageBonbonChocolat7);
 
@@ -641,12 +648,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat9->setName("Carré Uni")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, praliné noisettes, noisettes grillées hachées")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Praliné noisette, noisettes grillées hachées")
+            ->setMentions("Lait, soja, fruits à coque")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-carre-uni-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat9->getName())));
 
         $imageBonbonChocolat9 = new Image();
-        $imageBonbonChocolat9->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat9->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-carre-uni-2.jpg")
             ->setProduct($bonbonChocolat9);
         $manager->persist($imageBonbonChocolat9);
 
@@ -657,12 +665,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat10->setName("Rectangle Multi Reliefs")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, gianduja (pâte de noisettes), croustillant feuilleté")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Pâte de noisettes, crèpe dentelle")
+            ->setMentions("Lait, soja, gluten, fruits à coque")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rectangle-multi-reliefs-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat10->getName())));
 
         $imageBonbonChocolat10 = new Image();
-        $imageBonbonChocolat10->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat10->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rectangle-multi-reliefs-2.jpg")
             ->setProduct($bonbonChocolat10);
         $manager->persist($imageBonbonChocolat10);
 
@@ -673,12 +682,13 @@ class AppFixtures extends Fixture
         $bonbonChocolat11->setName("Rond Rayé")
             ->setPrice(0)
             ->setCategory($bonbonsChocolat)
-            ->setDetails("Chocolat noir, lait, pâte d’amande 55%")
+            ->setDetails("Chocolat noir de couverture (61% de cacao minimum, pur beurre de cacao) / Chocolat de couverture au lait (33% de cacao minimum, pur beurre de cacao) / Pâte d'amande")
+            ->setMentions("Lait, soja, fruits à coque")
             ->setMainPicture("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rond-raye-1.jpg")
             ->setSlug(strtolower($this->slugger->slug($bonbonChocolat11->getName())));
 
         $imageBonbonChocolat11 = new Image();
-        $imageBonbonChocolat11->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-ballotin-1.jpg")
+        $imageBonbonChocolat11->setUrl("https://www.ganacheetcabosse.com/build/images/bonbons-chocolat-rond-raye-2.jpg")
             ->setProduct($bonbonChocolat11);
         $manager->persist($imageBonbonChocolat11);
 
