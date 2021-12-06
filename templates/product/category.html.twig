@@ -1,15 +1,15 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-	{{ category.name }}
-	| Ganache &amp; Cabosse | Rethel
+	{{ category.name }} | Ganache &amp; Cabosse | Rethel
 {% endblock %}
 
 {% block body %}
 	<!-- intro -->
-	<section class="position-relative z-index-1" data-theme="dark-1">
-		<div class="container max-width-adaptive-lg padding-y-xl position-relative z-index-2">
+	<section class="padding-top-header position-relative z-index-1" data-theme="default">
+		<div class="container max-width-adaptive-lg padding-top-lg padding-bottom-xl position-relative z-index-2">
 			<div class="text-center">
+				<p class="text-uppercase text-xs letter-spacing-lg color-contrast-medium">Nos</p>
 				<h1 class="text-xxxl text-uppercase">{{ category.name }}</h1>
 			</div>
 		</div>
@@ -41,7 +41,10 @@
 					<div class="prod-card-v2">
 						<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
 							<figure class="media-wrapper media-wrapper--4:5">
-								<img src="{{ p.mainPicture }}" alt="{{ category.name }} | {{ p.name }} | Ganache &amp; Cabosse">
+								<img src="/uploads/{{ p.mainPicture }}" alt="{{ category.name }} | {{ p.name }} | Ganache &amp; Cabosse">
+								{% for image in p.images %}
+									<img src="/uploads/{{ image.url }}" alt="{{ category.name }} | {{ p.name }} | Ganache &amp; Cabosse">
+								{% endfor %}
 							</figure>
 						</a>
 

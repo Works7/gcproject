@@ -2,8 +2,9 @@
 
 namespace App\Controller;
 
-use App\Repository\CategoryRepository;
+use App\Repository\HeaderRepository;
 use App\Repository\ProductRepository;
+use App\Repository\CategoryRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -14,14 +15,10 @@ class HomeController extends AbstractController
      */
     public function homepage(ProductRepository $productRepository)
     {
-        $selection = ['framboisier', 'fraisier', 'foret-noire', 'multifruits'];
-
-        $products = $productRepository->findBy([
-            'slug' => $selection
-        ], ['slug' => 'DESC'], 4);
+        $products = $productRepository->findByIsBest(1);
 
         return $this->render('home.html.twig', [
-            'products' => $products
+            'products' => $products,
         ]);
     }
 
@@ -31,14 +28,6 @@ class HomeController extends AbstractController
     public function contact()
     {
         return $this->render('contact.html.twig');
-    }
-
-    /**
-     * @Route("/photos", name="photos")
-     */
-    public function photos()
-    {
-        return $this->render('photos.html.twig');
     }
 
     /**

@@ -48,6 +48,14 @@ class ProductController extends AbstractController
     }
 
     /**
+     * @Route("/noel", name="product_noel")
+     */
+    public function noel()
+    {
+        return $this->render('product/noel.html.twig');
+    }
+
+    /**
      * @Route("/{category_slug}/{slug}", name="product_show")
      */
     public function show($slug, ProductRepository $productRepository, CategoryRepository $categoryRepository)
@@ -55,6 +63,7 @@ class ProductController extends AbstractController
         $product = $productRepository->findOneBy([
             'slug' => $slug,
         ]);
+        $products = $productRepository->findByIsBest(1);
 
         if (!$product) {
             throw $this->createNotFoundException("Le produit demandé n'existe pas");
@@ -62,7 +71,8 @@ class ProductController extends AbstractController
 
         return $this->render('product/show.html.twig', [
             'slug' => $slug,
-            'product' => $product
+            'product' => $product,
+            'products' => $products,
         ]);
     }
 
@@ -100,6 +110,10 @@ class ProductController extends AbstractController
     public function create(Request $request, SluggerInterface $slugger, EntityManagerInterface $em)
     {
         $product = new Product;
+
+        $image = new Image();
+
+        $image->setUrl('http://placehold.it/400x300');
 
         $form = $this->createForm(ProductType::class, $product);
 

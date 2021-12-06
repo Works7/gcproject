@@ -5,13 +5,14 @@
 {% endblock %}
 
 {% block body %}
-	<section class="position-relative z-index-1" data-theme="dark-1">
-		<div class="container max-width-adaptive-lg padding-y-xl position-relative z-index-2">
+	<section class="padding-top-header position-relative z-index-1" data-theme="default">
+		<div class="container max-width-adaptive-lg padding-top-lg padding-bottom-xl position-relative z-index-2">
 			<div class="text-center">
 				<h1 class="text-xxxl text-uppercase">Chocolats</h1>
 			</div>
 		</div>
 	</section>
+	
 	<!-- categories -->
 	<section class="position-relative z-index-1 padding-top-lg padding-bottom-lg">
 		<div class="container max-width-adaptive-lg">
@@ -34,18 +35,18 @@
 
 		<div class="grid gap-sm">
 
-			<a class="card-v2 radius-md col-3@md" href="{{ path('product_category', {'slug' : 'bonbons-de-chocolat'}) }}">
+			<a class="card-v2 radius-md col-3@md" href="{{ path('product_category', {'slug' : 'ballotins-de-chocolats'}) }}">
 				<figure>
-					<img src="{{ asset('build/images/accueil-bonbons-chocolat.jpg') }}" alt="Image description">
+					<img src="{{ asset('build/images/chocolat-ballotins-chocolat.jpg') }}" alt="Image description">
 					<figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
-						<div class="text-md text-base@md">Bonbons de chocolat</div>
+						<div class="text-md text-base@md">Ballotins de chocolats</div>
 					</figcaption>
 				</figure>
 			</a>
 
 			<a class="card-v2 radius-md col-3@md" href="{{ path('product_category', {'slug' : 'tablettes-de-chocolat'}) }}">
 				<figure>
-					<img src="{{ asset('build/images/accueil-tablettes-chocolat.jpg') }}" alt="Image description">
+					<img src="{{ asset('build/images/chocolat-tablettes.jpg') }}" alt="Image description">
 					<figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
 						<div class="text-md text-base@md">Tablettes de chocolat</div>
 					</figcaption>
@@ -54,7 +55,7 @@
 
 			<a class="card-v2 radius-md col-3@md" href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}">
 				<figure>
-					<img src="{{ asset('build/images/accueil-specialites-chocolat.jpg') }}" alt="Image description">
+					<img src="{{ asset('build/images/chocolat-specialites.jpg') }}" alt="Image description">
 					<figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
 						<div class="text-md text-base@md">Spécialités en chocolat</div>
 					</figcaption>
@@ -63,7 +64,7 @@
 
 			<a class="card-v2 radius-md col-3@md" href="{{ path('product_category', {'slug' : 'moulages'}) }}">
 				<figure>
-					<img src="{{ asset('build/images/accueil-moulages-chocolat.jpg') }}" alt="Image description">
+					<img src="{{ asset('build/images/chocolat-moulages.jpg') }}" alt="Image description">
 					<figcaption class="card-v2__caption padding-x-sm padding-top-md padding-bottom-sm text-center">
 						<div class="text-md text-base@md">Moulages</div>
 					</figcaption>

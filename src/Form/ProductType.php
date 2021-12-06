@@ -3,21 +3,22 @@
 namespace App\Form;
 
 use App\Entity\Product;
+use App\Form\ImageType;
 use App\Entity\Category;
-use App\Form\DataTransformer\CentimesTransformer;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\CallbackTransformer;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\FormBuilderInterface;
+use App\Form\DataTransformer\CentimesTransformer;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
 class ProductType extends AbstractType
 {
@@ -56,7 +57,14 @@ class ProductType extends AbstractType
                 'choice_label' => function (Category $category) {
                     return $category->getName();
                 }
-            ]);
+            ])
+            ->add(
+                'images',
+                CollectionType::class,
+                [
+                    'entry_type' => ImageType::class
+                ]
+            );
     }
 
     public function configureOptions(OptionsResolver $resolver)

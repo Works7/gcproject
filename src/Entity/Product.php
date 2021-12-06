@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @ORM\Entity(repositoryClass=App\Repository\ProductRepository::class)
  */
 class Product
 {
@@ -27,12 +27,6 @@ class Product
     private $name;
 
     /**
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="Le prix du produit est obligatoire")
-     */
-    private $price;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
     private $slug;
@@ -44,15 +38,14 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Url(message="La photo principale doit être une URL valide")
      * @Assert\NotBlank(message="La photo principale est obligatoire")
      */
     private $mainPicture;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      * @Assert\NotBlank(message="La description courte est obligatoire")
-     * @Assert\Length(min=20, minMessage="La description courte doit quand même faire au moins 20 caractères")
+     * @Assert\Length(min=10, minMessage="La description courte doit quand même faire au moins 20 caractères")
      */
     private $details;
 
@@ -66,9 +59,24 @@ class Product
      */
     private $mentions;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isBest;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $size;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->getName();
     }
 
     public function getId(): ?int
@@ -84,18 +92,6 @@ class Product
     public function setName(?string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getPrice(): ?int
-    {
-        return $this->price;
-    }
-
-    public function setPrice(?int $price): self
-    {
-        $this->price = $price;
 
         return $this;
     }
@@ -186,6 +182,30 @@ class Product
     public function setMentions(?string $mentions): self
     {
         $this->mentions = $mentions;
+
+        return $this;
+    }
+
+    public function getIsBest(): ?bool
+    {
+        return $this->isBest;
+    }
+
+    public function setIsBest(bool $isBest): self
+    {
+        $this->isBest = $isBest;
+
+        return $this;
+    }
+
+    public function getSize(): ?string
+    {
+        return $this->size;
+    }
+
+    public function setSize(string $size): self
+    {
+        $this->size = $size;
 
         return $this;
     }

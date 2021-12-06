@@ -1,112 +1,117 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-	{{ product.name }}
-	|
-	{{ product.category.name }}
-	| Ganache &amp; Cabosse
+	{{ product.name }} | {{ product.category.name }} | Ganache &amp; Cabosse
 {% endblock %}
 
 {% block body %}
-	<main
-		class="position-relative z-index-1">
-		<!-- product v2 -->
-		<div class="container max-width-adaptive-lg">
-			<div class="margin-top-lg">
-				<section class="product-v2 js-product-v2">
-					<div class="grid gap-md">
+	<!-- product v2 -->
+	<main class="position-relative z-index-1">
+		<!-- product -->
+		<section class="product-v2 padding-top-lg margin-bottom-xl js-product-v2">
+			<div class="container max-width-adaptive-lg">
+				<div class="grid gap-md">
+					<div class="col-6@md col-7@lg min-width-0">
+						<div class="thumbslide js-thumbslide">
+							<div class="slideshow js-product-v2__slideshow slideshow--transition-slide slideshow--ratio-1:1" data-control="hover">
+								<p class="sr-only">Slideshow Items</p>
 
+								<ul class="slideshow__content">
+									<li class="slideshow__item bg js-slideshow__item slideshow__item--selected" data-thumb="/uploads/{{ product.mainPicture }}" id="item-Black">
+										<figure class="position-absolute height-100% width-100% top-0 left-0">
+											<div class="img-mag height-100% js-img-mag">
+												<img class="img-mag__asset height-100% object-cover" src="/uploads/{{ product.mainPicture }}" alt="{{ product.name }} | Ganache &amp; Cabosse">
+											</div>
+										</figure>
+									</li>
 
-						<div class="col-6@md col-7@lg min-width-0">
-							<div class="thumbslide thumbslide--vertical thumbslide--left js-thumbslide">
-								<div class="slideshow js-product-v2__slideshow slideshow--transition-slide slideshow--ratio-1:1" data-control="hover">
-									<p class="sr-only">Slideshow Items</p>
-
-									<ul class="slideshow__content">
-										<li class="slideshow__item bg js-slideshow__item slideshow__item--selected" data-thumb="{{ product.mainPicture }}" id="item-Black">
+									{% for image in product.images %}
+										<li class="slideshow__item bg js-slideshow__item" data-thumb="/uploads/{{ image.url }}" id="item-White">
 											<figure class="position-absolute height-100% width-100% top-0 left-0">
 												<div class="img-mag height-100% js-img-mag">
-													<img class="img-mag__asset height-100% object-cover	" src="{{ product.mainPicture }}" alt="{{ product.name }} | Ganache &amp; Cabosse">
+													<img class="img-mag__asset height-100% object-cover" src="/uploads/{{ image.url }}" alt="{{ product.name }} | Ganache &amp; Cabosse">
 												</div>
 											</figure>
 										</li>
-
-										{% for image in product.images %}
-											<li class="slideshow__item bg js-slideshow__item" data-thumb="{{ image.url }}" id="item-White">
-												<figure class="position-absolute height-100% width-100% top-0 left-0">
-													<div class="img-mag height-100% js-img-mag">
-														<img class="img-mag__asset height-100% object-cover js-img-mag__asset" src="{{ image.url }}" alt="{{ product.name }} | Ganache &amp; Cabosse">
-													</div>
-												</figure>
-											</li>
-										{% endfor %}
-									</ul>
-								</div>
-
-								<div class="thumbslide__nav-wrapper" aria-hidden="true">
-									<nav class="thumbslide__nav">
-										<ol
-											class="thumbslide__nav-list"><!-- this content will be created using JavaScript -->
-										</ol>
-									</nav>
-								</div>
+									{% endfor %}
+								</ul>
 							</div>
-						</div>
 
-						<div class="col-6@md col-5@lg">
-							<div class="margin-bottom-sm">
-								<nav class="breadcrumbs text-sm" aria-label="Breadcrumbs">
-									<ol class="flex flex-wrap gap-xxs">
-										<li class="breadcrumbs__item">
-											<a href="{{ path('homepage') }}" class="color-inherit">Accueil</a>
-											<span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
-										</li>
-
-										<li class="breadcrumbs__item">
-											<a href="{{ path('product_category', {'slug' : product.category.slug}) }}" class="color-inherit">{{ product.category.name }}</a>
-											<span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
-										</li>
-
-										<li class="breadcrumbs__item" aria-current="page">{{ product.name }}</li>
+							<div class="thumbslide__nav-wrapper" aria-hidden="true">
+								<nav class="thumbslide__nav">
+									<ol
+										class="thumbslide__nav-list"><!-- this content will be created using JavaScript -->
 									</ol>
 								</nav>
 							</div>
-
-							<div class="text-component v-space-xs margin-bottom-md">
-								<h1>{{ product.name }}</h1>
-								<p class="color-contrast-medium">{{ product.details }}</p>
-							</div>
-							{% if product.category.slug == 'bonbons-de-chocolat' %}
-								<div class="tabs text-sm js-tabs">
-									<ul class="flex flex-wrap gap-sm js-tabs__controls" aria-label="Tabs Interface">
-										<li>
-											<a href="#proTabPanelDetails" class="tabs__control" aria-selected="true">Allergènes</a>
-										</li>
-										<li>
-											<a href="#proTabPanelSizing" class="tabs__control">Conditionnement</a>
-										</li>
-									</ul>
-
-									<div class="js-tabs__panels">
-										<section id="proTabPanelDetails" class="padding-top-sm js-tabs__panel">
-											<div class="text-component color-contrast-medium">
-												<p>{{ product.mentions }}</p>
-											</div>
-										</section>
-
-										<section id="proTabPanelSizing" class="padding-top-sm js-tabs__panel">
-											<div class="text-component color-contrast-medium">
-												<p>En ballotin de 125g, 250g, 375g ou 500g</p>
-											</div>
-										</section>
-									</div>
-								</div>
-							{% endif %}
 						</div>
 					</div>
-				</section>
+
+					<div class="col-6@md col-5@lg">
+						<div class="margin-bottom-sm">
+							<nav class="breadcrumbs text-sm" aria-label="Breadcrumbs">
+								<ol class="flex flex-wrap gap-xxs">
+									<li class="breadcrumbs__item">
+										<a href="{{ path('homepage') }}" class="color-inherit">Accueil</a>
+										<span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
+									</li>
+
+									<li class="breadcrumbs__item">
+										<a href="{{ path('product_category', {'slug' : product.category.slug}) }}" class="color-inherit">{{ product.category.name }}</a>
+										<span class="color-contrast-low margin-left-xxs" aria-hidden="true">/</span>
+									</li>
+
+									<li class="breadcrumbs__item" aria-current="page">{{ product.name }}</li>
+								</ol>
+							</nav>
+						</div>
+
+						<div class="text-component v-space-xs margin-bottom-md">
+							<h1 class="text-uppercase">{{ product.name }}</h1>
+							<p class="color-contrast-medium">{{ product.details | nl2br }}</p>
+						</div>
+
+						<div class="tabs text-sm js-tabs">
+							<ul class="flex flex-wrap gap-sm js-tabs__controls" aria-label="Tabs Interface">
+								<li>
+									<a href="#proTabPanelSizing" class="tabs__control">
+										{% if product.category.slug == "patisseries" %}
+											Taille
+										{% elseif product.category.slug == "macarons" %}
+											Conditionnement
+										{% elseif product.category.slug == "tablettes-de-chocolat" %}
+											Poids
+										{% elseif product.category.slug == "specialites-en-chocolat" %}
+											Conditionnement
+										{% elseif product.category.slug == "ballotins-de-chocolats" %}
+											Composition
+										{% elseif product.category.slug == "moulages" %}
+											Poids
+										{% endif %}
+									</a>
+								</li>
+								<li>
+									<a href="#proTabPanelDetails" class="tabs__control" aria-selected="true">Allergènes</a>
+								</li>
+							</ul>
+
+							<div class="js-tabs__panels">
+								<section id="proTabPanelSizing" class="padding-top-sm js-tabs__panel">
+									<div class="text-component color-contrast-medium margin-bottom-sm">
+										<p>{{ product.size | nl2br }}
+									</div>
+								</section>
+								<section id="proTabPanelDetails" class="padding-top-sm js-tabs__panel">
+									<div class="text-component color-contrast-medium">
+										<p>{{ product.mentions }}</p>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
+		</section>
 	</main>
 {% endblock %}
 
