@@ -77,6 +77,10 @@
 									<a href="#proTabPanelSizing" class="tabs__control">
 										{% if product.category.slug == "patisseries" %}
 											Taille
+										{% elseif product.category.slug == "buches-de-noel" %}
+											Taille
+										{% elseif product.category.slug == "moulages-de-noel" %}
+											Poids	
 										{% elseif product.category.slug == "macarons" %}
 											Conditionnement
 										{% elseif product.category.slug == "tablettes-de-chocolat" %}
@@ -84,6 +88,8 @@
 										{% elseif product.category.slug == "specialites-en-chocolat" %}
 											Conditionnement
 										{% elseif product.category.slug == "ballotins-de-chocolats" %}
+											Composition
+										{% elseif product.category.slug == "coffrets-de-chocolats" %}
 											Composition
 										{% elseif product.category.slug == "moulages" %}
 											Poids

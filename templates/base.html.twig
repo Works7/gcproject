@@ -22,25 +22,6 @@
 
 	<body>
 		<!-- pre-header -->
-		<div class="pre-header bg-primary padding-y-xs js-pre-header color-white">
-			<div class="container max-width-lg position-relative">
-				<div class="text-component text-sm text-center padding-x-lg">
-					<p>Clôture des commandes du 24/12 et 25/12 le 17/12.
-						<a href="/carte_fetes_gc.pdf" target="_blank" class="color-inherit text-underline">Découvrir notre carte des fêtes &rarr;</a>
-					</p>
-				</div>
-
-				<button class="reset pre-header__close-btn js-pre-header__close-btn">
-					<svg class="icon" viewbox="0 0 16 16">
-						<title>Fermer la bannière</title>
-						<g stroke-width="1" stroke="currentColor" fill="none" stroke-miterlimit="10">
-							<line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line>
-							<line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line>
-						</g>
-					</svg>
-				</button>
-			</div>
-		</div>
 
 		<!-- header -->
 		<header class="mega-nav mega-nav--border-bottom mega-nav--mobile mega-nav--desktop@md bg position-relative hide-nav ie:bg js-mega-nav js-hide-nav js-hide-nav--main" data-nav-target-class="mega-nav--expanded">
@@ -68,7 +49,7 @@
 						<ul
 							class="mega-nav__items">
 							<!-- layout 1 -> tabbed content -->
-							{# <li class="mega-nav__item js-mega-nav__item">
+							<li class="mega-nav__item js-mega-nav__item">
 								<button class="reset mega-nav__control js-mega-nav__control js-tab-focus">
 									Noël
 									<i class="mega-nav__arrow-icon" aria-hidden="true">
@@ -82,50 +63,49 @@
 								</button>
 
 								<div class="mega-nav__sub-nav-wrapper">
-									<div
-										class="mega-nav__sub-nav mega-nav__sub-nav--layout-1">
+									<div class="mega-nav__sub-nav mega-nav__sub-nav--layout-1">
 										<!-- links - visible on mobile -->
 										<ul class="mega-nav__sub-items">
 											<li class="mega-nav__sub-item">
-												<a href="product-v1.html" class="mega-nav__sub-link">
+												<a href="{{ path('product_category', {'slug' : 'buches-de-noel'}) }}" class="mega-nav__sub-link">
 													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-buche.jpg') }}" alt="Bûches de Noël">
 														<i>Bûches de Noël</i>
 													</span>
 												</a>
 											</li>
 
 											<li class="mega-nav__sub-item">
-												<a href="product-v2.html" class="mega-nav__sub-link">
+												<a href="{{ path('product_category', {'slug' : 'coffrets-de-chocolats'}) }}" class="mega-nav__sub-link">
 													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-coffret.jpg') }}" alt="Coffrets de chocolats">
 														<i>Coffrets de chocolats</i>
 													</span>
 												</a>
 											</li>
 
 											<li class="mega-nav__sub-item">
-												<a href="product-v1.html" class="mega-nav__sub-link">
+												<a href="{{ path('product_category', {'slug' : 'moulages-de-noel'}) }}" class="mega-nav__sub-link">
 													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-moulage.jpg') }}" alt="Moulages de Noël">
 														<i>Moulages de Noël</i>
 													</span>
 												</a>
 											</li>
 
 											<li class="mega-nav__sub-item">
-												<a href="product-v1.html" class="mega-nav__sub-link">
+												<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="mega-nav__sub-link">
 													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-specialite.jpg') }}" alt="Spécialités en chocolat">
 														<i>Spécialités en chocolat</i>
 													</span>
 												</a>
 											</li>
 
 											<li class="mega-nav__sub-item">
-												<a href="product-v1.html" class="mega-nav__sub-link">
+												<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="mega-nav__sub-link">
 													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-macaron.jpg') }}" alt="Macarons">
 														<i>Macarons</i>
 													</span>
 												</a>
@@ -138,7 +118,7 @@
 												<li>
 													<a href="#tabProduct1" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
 														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-buche.jpg') }}" alt="Bûches de Noël">
 
 															<i class="margin-right-xxxs">Bûches de Noël</i>
 
@@ -152,7 +132,7 @@
 												<li>
 													<a href="#tabProduct2" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
 														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-coffret.jpg') }}" alt="Coffrets de chocolats">
 
 															<i class="margin-right-xxxs">Coffrets de chocolats</i>
 
@@ -166,7 +146,7 @@
 												<li>
 													<a href="#tabProduct3" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
 														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-moulage.jpg') }}" alt="Moulages de Noël">
 
 															<i class="margin-right-xxxs">Moulages de Noël</i>
 
@@ -180,7 +160,7 @@
 												<li>
 													<a href="#tabProduct4" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
 														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-specialite.jpg') }}" alt="Spécialités en chocolat">
 
 															<i class="margin-right-xxxs">Spécialités en chocolat</i>
 
@@ -194,7 +174,7 @@
 												<li>
 													<a href="#tabProduct5" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
 														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="http://www.placehold.it/1600x520" alt="Image description">
+															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-macaron.jpg') }}" alt="Macarons">
 
 															<i class="margin-right-xxxs">Macarons</i>
 
@@ -208,76 +188,66 @@
 
 											<div class="col-8 js-tabs__panels">
 												<section id="tabProduct1" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="product-v1.html" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="http://www.placehold.it/1600x520" alt="Image description">
+													<a href="{{ path('product_category', {'slug' : 'buches-de-noel'}) }}" class="mega-nav__tabs-img margin-bottom-md">
+														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-buche.jpg') }}" alt="Bûches de Noël">
 													</a>
 
 													<div class="text-component">
 														<h1 class="text-xl">Bûches de Noël</h1>
-														<p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                            Amet, quaerat.</p>
-														<p>
-															<a href="product-v1.html" class="btn btn--subtle">Découvrir</a>
+														<p class="color-contrast-medium"><p>
+															<a href="{{ path('product_category', {'slug' : 'buches-de-noel'}) }}" class="btn btn--subtle">Découvrir</a>
 														</p>
 													</div>
 												</section>
 
 												<section id="tabProduct2" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="product-v2.html" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="http://www.placehold.it/1600x520" alt="Image description">
+													<a href="{{ path('product_category', {'slug' : 'coffrets-de-chocolats'}) }}" class="mega-nav__tabs-img margin-bottom-md">
+														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-coffret.jpg') }}" alt="Coffrets de chocolats">
 													</a>
 
 													<div class="text-component">
 														<h1 class="text-xl">Coffrets de chocolats</h1>
-														<p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                            Amet, quaerat.</p>
-														<p>
-															<a href="product-v2.html" class="btn btn--subtle">Découvrir</a>
+														<p class="color-contrast-medium"><p>
+															<a href="{{ path('product_category', {'slug' : 'coffrets-de-chocolats'}) }}" class="btn btn--subtle">Découvrir</a>
 														</p>
 													</div>
 												</section>
 
 												<section id="tabProduct3" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="product-v1.html" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="http://www.placehold.it/1600x520" alt="Image description">
+													<a href="{{ path('product_category', {'slug' : 'moulages-de-noel'}) }}" class="mega-nav__tabs-img margin-bottom-md">
+														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-moulage.jpg') }}" alt="Moulages de Noël<">
 													</a>
 
 													<div class="text-component">
 														<h1 class="text-xl">Moulages de Noël</h1>
-														<p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                            Amet, quaerat.</p>
-														<p>
-															<a href="product-v1.html" class="btn btn--subtle">Découvrir</a>
+														<p class="color-contrast-medium"><p>
+															<a href="{{ path('product_category', {'slug' : 'moulages-de-noel'}) }}" class="btn btn--subtle">Découvrir</a>
 														</p>
 													</div>
 												</section>
 
 												<section id="tabProduct4" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="product-v1.html" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="http://www.placehold.it/1600x520" alt="Image description">
+													<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="mega-nav__tabs-img margin-bottom-md">
+														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-specialite.jpg') }}" alt="Spécialités en chocolat">
 													</a>
 
 													<div class="text-component">
 														<h1 class="text-xl">Spécialités en chocolat</h1>
-														<p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                            Amet, quaerat.</p>
-														<p>
-															<a href="product-v1.html" class="btn btn--subtle">Découvrir</a>
+														<p class="color-contrast-medium"><p>
+															<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="btn btn--subtle">Découvrir</a>
 														</p>
 													</div>
 												</section>
 
 												<section id="tabProduct5" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="product-v1.html" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="http://www.placehold.it/1600x520" alt="Image description">
+													<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="mega-nav__tabs-img margin-bottom-md">
+														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-macaron.jpg') }}" alt="Macarons">
 													</a>
 
 													<div class="text-component">
 														<h1 class="text-xl">Macarons</h1>
-														<p class="color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																                            Amet, quaerat.</p>
-														<p>
-															<a href="product-v1.html" class="btn btn--subtle">Découvrir</a>
+														<p class="color-contrast-medium"><p>
+															<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="btn btn--subtle">Découvrir</a>
 														</p>
 													</div>
 												</section>
@@ -285,7 +255,7 @@
 										</div>
 									</div>
 								</div>
-							</li> #}
+							</li>
 
 							<!-- layout 2 -> multiple lists -->
 							<li class="mega-nav__item">
@@ -317,7 +287,7 @@
 
 											<div class="margin-top-sm">
 												<h3 class="text-base">
-													<a href="{{ path('product_category', {'slug' : 'ballotins-de-chocolat'}) }}" class="mega-nav__card-title">Ballotins de chocolat</a>
+													<a href="{{ path('product_category', {'slug' : 'ballotins-de-chocolat'}) }}" class="mega-nav__card-title">Ballotins de chocolats</a>
 												</h3>
 											</div>
 										</div>

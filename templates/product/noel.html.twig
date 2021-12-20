@@ -6,67 +6,27 @@
 
 {% block body %}
 	<!-- intro -->
-	<section class="padding-top-header position-relative z-index-1" data-theme="dark-2">
-		<div class="container max-width-adaptive-lg padding-top-xl padding-bottom-lg position-relative z-index-2">
+	<section class="padding-top-header position-relative z-index-1" data-theme="default">
+		<div class="container max-width-adaptive-lg padding-top-lg padding-bottom-xl position-relative z-index-2">
 			<div class="text-center">
 				<p class="text-uppercase text-xs letter-spacing-lg color-contrast-medium">Collection</p>
 				<h1 class="text-xxxl text-uppercase">Noël</h1>
 			</div>
 		</div>
-
-		<figure class="bg-decoration-v3 z-index-1" aria-hidden="true">
-			<svg class="bg-decoration-v3__svg top-0 left-0 color-contrast-higher opacity-20%" viewbox="0 0 1920 610">
-				<defs>
-					<linearGradient id="bg-dec-v3-gradient-5" gradienttransform="rotate(90)">
-						<stop offset="0" stop-color="white" stop-opacity="1"/>
-						<stop offset="1" stop-color="white" stop-opacity="0"/>
-					</linearGradient>
-
-					<mask id="bg-dec-v3-gradient-mask-5">
-						<rect x="0" y="0" width="1920" height="610" fill="url(#bg-dec-v3-gradient-5)"/>
-					</mask>
-				</defs>
-
-				<g fill="none" stroke="currentColor" stroke-miterlimit="10" mask="url(#bg-dec-v3-gradient-mask-5)">
-					<polyline points="-699.07 -165.58 38.206 443.271 107.459 386.081 341.853 579.647 1305 -215.731"/>
-					<polyline points="-651.354 -164.839 50.813 420.594 116.769 365.604 340.001 551.725 1257.284 -213.061"/>
-					<polyline points="-605.911 -164.127 62.821 398.79 125.635 345.915 338.237 524.877 1211.84 -210.495"/>
-					<polyline points="-562.631 -163.442 74.256 377.824 134.079 326.983 336.558 499.061 1168.56 -208.026"/>
-					<polyline points="-521.412 -162.784 85.147 357.665 142.121 308.778 334.958 474.239 1127.342 -205.653"/>
-					<polyline points="-482.156 -162.151 95.519 338.28 149.781 291.275 333.435 450.371 1088.086 -203.371"/>
-					<polyline points="-444.769 -161.542 105.398 319.642 157.075 274.444 331.984 427.421 1050.699 -201.177"/>
-					<polyline points="-409.163 -160.957 114.806 301.72 164.022 258.261 330.602 405.354 1015.093 -199.067"/>
-					<polyline points="-375.252 -160.394 123.766 284.488 170.639 242.7 329.286 384.136 981.182 -197.039"/>
-					<polyline points="-342.956 -159.853 132.299 267.918 176.94 227.737 328.032 363.734 948.886 -195.088"/>
-					<polyline points="-312.198 -159.332 140.426 251.986 182.941 213.35 326.839 344.116 918.127 -193.213"/>
-					<polyline points="-282.904 -158.832 148.166 236.666 188.656 199.517 325.702 325.253 888.834 -191.409"/>
-					<polyline points="-255.006 -158.351 155.537 221.936 194.1 186.215 324.619 307.115 860.935 -189.675"/>
-					<polyline points="-228.436 -157.888 162.558 207.772 199.284 173.425 323.588 289.676 834.365 -188.008"/>
-					<polyline points="-203.131 -157.443 169.244 194.153 204.221 161.127 322.606 272.906 809.061 -186.404"/>
-					<polyline points="-179.031 -157.016 175.611 181.058 208.923 149.302 321.671 256.782 784.961 -184.863"/>
-					<polyline points="-156.079 -156.605 181.676 168.466 213.401 137.932 320.78 241.278 762.009 -183.381"/>
-					<polyline points="-134.22 -156.209 187.451 156.359 217.666 126.999 319.932 226.37 740.149 -181.955"/>
-					<polyline points="-113.402 -155.829 192.952 144.717 221.728 116.487 319.124 212.036 719.331 -180.585"/>
-					<polyline points="-93.575 -155.463 198.191 133.523 225.596 106.379 318.354 198.253 699.504 -179.267"/>
-					<polyline points="-74.692 -155.112 203.18 122.76 229.281 96.659 317.621 185 680.621 -178"/>
-				</g>
-			</svg>
-		</figure>
 	</section>
 
 	<!-- categories -->
-	<section class="padding-top-xl padding-bottom-xxl">
+	<section class="padding-top-xl padding-bottom-xl">
 		<div class="container max-width-adaptive-lg">
 			<div
 				class="grid gap-xl">
-				<!-- clothing -->
+				<!-- bûches -->
 				<div>
 					<div class="grid gap-lg">
 						<div class="col-3@lg">
 							<div class="text-component text-center text-left@lg">
 								<h2>Bûches de Noël</h2>
-								<p class="text-sm color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit unde iure velit.</p>
-								<p>
+								<p class="text-sm color-contrast-medium"><p>
 									<a href="{{ path('product_category', {'slug' : 'buches-de-noel'}) }}" class="btn btn--subtle" role="text">Tout découvrir
 										<i class="sr-only">products</i>
 									</a>
@@ -77,57 +37,46 @@
 						<div class="col-9@lg">
 							<div class="grid gap-sm">
 								<div class="prod-card-v2 col-4@md">
-									<span class="prod-card-v2__badge" role="text">New
-										<i class="sr-only">product</i>
-									</span>
-
-									<a href="/buche-de-noel/buche-3-chocolats" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'buche-de-noel', 'slug': 'buche-pistache-griotte'}) }}" class="prod-card-v2__img-link" aria-label="Bûche Pistache Griotte">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="uploads/4924ab424a13b8f96ea442d31cf1a235d507fb87.jpeg" loading="lazy" alt="Product preview image">
-											<img src="uploads/194025332b85a1979739adc7443c695e4dc92fe9.jpeg" loading="lazy" alt="Product preview image" aria-hidden="true">
+											<img src="uploads/effdc029bc3f779938fc3fd2c1777cfe847505fe.jpeg" loading="lazy" alt="Bûche Pistache Griotte">
+											<img src="uploads/fe0c3001cc927e7de32df63e9072d38bdb10d78e.jpeg" loading="lazy" alt="Bûche Pistache Griotte">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Bûche 3 Chocolats</a>
+											<a href="{{ path('product_show', {'category_slug': 'buche-de-noel', 'slug': 'buche-pistache-griotte'}) }}" class="product-card-v2__title">Bûche Pistache Griotte</a>
 										</h2>
 									</div>
 								</div>
 
 								<div class="prod-card-v2 col-4@md">
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'buche-de-noel', 'slug': 'buche-framboise'}) }}" class="prod-card-v2__img-link" aria-label="Bûche Framboise">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-2a.jpg" alt="Product preview image">
+											<img src="uploads/e12866a98d6d263318b0d84e94b45fe1f793c66c.jpeg" loading="lazy" alt="Bûche Framboise">
+											<img src="uploads/c8dfe56d7bed77283b9d94b39251b7cb14ee2001.jpeg" loading="lazy" alt="Bûche Framboise">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'buche-de-noel', 'slug': 'buche-framboise'}) }}" class="product-card-v2__title">Bûche Framboise</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 
 								<div class="prod-card-v2 col-4@md">
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'buche-de-noel', 'slug': 'buche-3-chocolats'}) }}" class="prod-card-v2__img-link" aria-label="Bûche 3 Chocolats">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-3a.jpg" alt="Product preview image">
+											<img src="uploads/91c4077dc1c8d97cee7fcd6a0f7948f103ca5070.jpeg" loading="lazy" alt="Bûche 3 Chocolats">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'buche-de-noel', 'slug': 'buche-3-chocolats'}) }}" class="product-card-v2__title">Bûche 3 Chocolats</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -135,15 +84,14 @@
 					</div>
 				</div>
 
-				<!-- accessories -->
+				<!-- coffrets de chocolat -->
 				<div>
 					<div class="grid gap-lg">
 						<div class="col-3@lg">
 							<div class="text-component text-center text-left@lg">
-								<h2>Coffrets de chocolats de Noël</h2>
-								<p class="text-sm color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit unde iure velit.</p>
-								<p>
-									<a href="shop-category.html" class="btn btn--subtle" role="text">View all
+								<h2>Coffrets de chocolats</h2>
+								<p class="text-sm color-contrast-medium"><p>
+									<a href="{{ path('product_category', {'slug' : 'coffrets-de-chocolats'}) }}" class="btn btn--subtle" role="text">Tout découvrir
 										<i class="sr-only">products</i>
 									</a>
 								</p>
@@ -153,64 +101,47 @@
 						<div class="col-9@lg">
 							<div class="grid gap-sm">
 								<div class="prod-card-v2 col-4@md">
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'coffrets-de-chocolats', 'slug': 'coffret-120g'}) }}" class="prod-card-v2__img-link" aria-label="Coffret de bonbons de chocolat (120g)">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-4a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/4c971c34d81a830be1c665e3cd7bd907fb732b72.jpeg" loading="lazy" alt="Coffret de bonbons de chocolat (120g)">
+											<img src="uploads/224f4e609a451e85091690e355f26bcc0a1cdbdc.jpeg" loading="lazy" alt="Coffret de bonbons de chocolat (120g)">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'coffrets-de-chocolats', 'slug': 'coffret-120g'}) }}" class="product-card-v2__title">Coffret (120g)</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 
 								<div class="prod-card-v2 col-4@md">
-									<span class="prod-card-v2__badge" role="text">New
-										<i class="sr-only">product</i>
-									</span>
-
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'coffrets-de-chocolats', 'slug': 'coffret-200g'}) }}" class="prod-card-v2__img-link" aria-label="Coffret de bonbons de chocolat (200g)">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-5a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/f8bbc9acd203b3d7a9a6f801d112da641435b1f4.jpeg" loading="lazy" alt="Coffret de bonbons de chocolat (200g)">
+											<img src="uploads/74489d9b7dda367f484e9d4b871c9bea8d7a67f9.jpeg" loading="lazy" alt="Coffret de bonbons de chocolat (200g)">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'coffrets-de-chocolats', 'slug': 'coffret-200g'}) }}" class="product-card-v2__title">Coffret (200g)</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 
 								<div class="prod-card-v2 col-4@md">
-									<span class="prod-card-v2__badge" role="text">New
-										<i class="sr-only">product</i>
-									</span>
-
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'coffrets-de-chocolats', 'slug': 'coffret-240g'}) }}" class="prod-card-v2__img-link" aria-label="Coffret de bonbons de chocolat (240g)">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-8a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/80cc48068ea3faf9d26cc11182775622d38a3235.jpeg" loading="lazy" alt="Coffret de bonbons de chocolat (2400g)">
+											<img src="uploads/8f19373140ef394d1f9b1344e10838cd921ff3a4.jpeg" loading="lazy" alt="Coffret de bonbons de chocolat (2400g)">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'coffrets-de-chocolats', 'slug': 'coffret-240g'}) }}" class="product-card-v2__title">Coffret (240g)</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -218,15 +149,14 @@
 					</div>
 				</div>
 
-				<!-- home -->
+				<!-- moulages -->
 				<div>
 					<div class="grid gap-lg">
 						<div class="col-3@lg">
 							<div class="text-component text-center text-left@lg">
 								<h2>Moulages de Noël</h2>
-								<p class="text-sm color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit unde iure velit.</p>
-								<p>
-									<a href="shop-category.html" class="btn btn--subtle" role="text">Découvrir
+								<p class="text-sm color-contrast-medium"><p>
+									<a href="{{ path('product_category', {'slug' : 'moulages-de-noel'}) }}" class="btn btn--subtle" role="text">Tout découvrir
 										<i class="sr-only">products</i>
 									</a>
 								</p>
@@ -236,60 +166,47 @@
 						<div class="col-9@lg">
 							<div class="grid gap-sm">
 								<div class="prod-card-v2 col-4@md">
-									<span class="prod-card-v2__badge" role="text">New
-										<i class="sr-only">product</i>
-									</span>
-
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'moulages-de-noel', 'slug': 'pere-noel'}) }}" class="prod-card-v2__img-link" aria-label="Père-Noël">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-9a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/255f90150c9244bab3fcfa87408f981fbb0123b1.jpeg" loading="lazy" alt="Père-Noël">
+											<img src="uploads/63550e51834c7a14a7f5e5823554286260af6cd4.jpeg" loading="lazy" alt="Père-Noël">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'moulages-de-noel', 'slug': 'pere-noel'}) }}" class="product-card-v2__title">Père-Noël</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 
 								<div class="prod-card-v2 col-4@md">
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'moulages-de-noel', 'slug': 'mere-noel'}) }}" class="prod-card-v2__img-link" aria-label="Mère-Noël">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-10a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/13e1e04af9d82635a378fa074b72914fa4bd841e.jpeg" loading="lazy" alt="Mère-Noël">
+											<img src="uploads/67e849a033572f295507a90199cab3d0eb7356a5.jpeg" loading="lazy" alt="Mère-Noël">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'moulages-de-noel', 'slug': 'mere-noel'}) }}" class="product-card-v2__title">Mère-Noël</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 
 								<div class="prod-card-v2 col-4@md">
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'moulages-de-noel', 'slug': 'bonhomme-de-neige'}) }}" class="prod-card-v2__img-link" aria-label="Bonhomme de neige">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-11a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/e80e98391226a9959faff5f6d470c2d118d2b1b7.jpeg" loading="lazy" alt="Bonhomme de neige">
+											<img src="uploads/16c08e99df17e0ffa4f7c4098e9ca6a0afd95f9c.jpeg" loading="lazy" alt="Bonhomme de neige">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'moulages-de-noel', 'slug': 'bonhomme-de-neige'}) }}" class="product-card-v2__title">Bonhomme de neige</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -297,15 +214,14 @@
 					</div>
 				</div>
 
-				<!-- home -->
+				<!-- specialites -->
 				<div>
 					<div class="grid gap-lg">
 						<div class="col-3@lg">
 							<div class="text-component text-center text-left@lg">
 								<h2>Spécialités en chocolats</h2>
-								<p class="text-sm color-contrast-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit unde iure velit.</p>
-								<p>
-									<a href="shop-category.html" class="btn btn--subtle" role="text">View all
+								<p class="text-sm color-contrast-medium"><p>
+									<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="btn btn--subtle" role="text">Tout découvrir
 										<i class="sr-only">products</i>
 									</a>
 								</p>
@@ -315,62 +231,112 @@
 						<div class="col-9@lg">
 							<div class="grid gap-sm">
 								<div class="prod-card-v2 col-4@md">
-									<span class="prod-card-v2__badge" role="text">New
-										<i class="sr-only">product</i>
-									</span>
-
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'specialites-en-chocolat', 'slug': 'fritures-de-noel'}) }}" class="prod-card-v2__img-link" aria-label="Fritures de Noël">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-9a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/59c97c6db1c6aae5b78c36fbea5a476cf4e9836b.jpeg" loading="lazy" alt="Fritures de Noël">
+											<img src="uploads/3d3000af0a9ab1353e958b6dbe7de5c37b599689.jpeg" loading="lazy" alt="Fritures de Noël">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'specialites-en-chocolat', 'slug': 'fritures-de-noel'}) }}" class="product-card-v2__title">Fritures de Noël</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 
 								<div class="prod-card-v2 col-4@md">
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'specialites-en-chocolat', 'slug': 'assortiment-de-mendiants'}) }}" class="prod-card-v2__img-link" aria-label="Assortiment de mendiants">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-10a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/64a177f7028c2814cb4ac4870be28396c872b1af.jpeg" loading="lazy" alt="Assortiment de mendiants">
+											<img src="uploads/3e1de850ab99f8db0ffaa1c7b629818a97cea38c.jpeg" loading="lazy" alt="Assortiment de mendiants">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'specialites-en-chocolat', 'slug': 'assortiment-de-mendiants'}) }}" class="product-card-v2__title">Assortiment de mendiants</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
 
 								<div class="prod-card-v2 col-4@md">
-									<a href="#0" class="prod-card-v2__img-link" aria-label="Description of the link">
+									<a href="{{ path('product_show', {'category_slug': 'specialites-en-chocolat', 'slug': 'ardoises-ardennaises'}) }}" class="prod-card-v2__img-link" aria-label="Ardoises ardennaises">
 										<figure class="media-wrapper media-wrapper--4:5">
-											<img src="assets/img/product-card-v2-img-11a.jpg" loading="lazy" alt="Product preview image">
+											<img src="uploads/83fedf34c6e14248ceb730008967a03dd6ee8d9f.jpeg" loading="lazy" alt="Ardoises ardennaises">
 										</figure>
 									</a>
 
 									<div class="padding-sm text-center">
 										<h2 class="text-md font-primary">
-											<a href="#0" class="product-card-v2__title">Product Name</a>
+											<a href="{{ path('product_show', {'category_slug': 'specialites-en-chocolat', 'slug': 'ardoises-ardennaises'}) }}" class="product-card-v2__title">Ardoises ardennaises</a>
 										</h2>
-
-										<div class="margin-top-xxxs">
-											<span class="prod-card-v2__price">$79</span>
-										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- macarons -->
+				<div>
+					<div class="grid gap-lg">
+						<div class="col-3@lg">
+							<div class="text-component text-center text-left@lg">
+								<h2>Macarons</h2>
+								<p class="text-sm color-contrast-medium"><p>
+									<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="btn btn--subtle" role="text">Tout découvrir</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="col-9@lg">
+							<div class="grid gap-sm">
+								<div class="prod-card-v2 col-4@md">
+									<a href="{{ path('product_show', {'category_slug': 'macarons', 'slug': 'macaron-chocolat'}) }}" class="prod-card-v2__img-link" aria-label="Macaron Chocolat">
+										<figure class="media-wrapper media-wrapper--4:5">
+											<img src="uploads/cbf49d55b3ac7197bb58ef5254aa4736b5352b4c.jpeg" loading="lazy" alt="Macaron Chocolat">
+											<img src="uploads/d1e6caa84793071e0311429ce15d35dffc64348b.jpeg" loading="lazy" alt="Macaron Chocolat">
+										</figure>
+									</a>
+
+									<div class="padding-sm text-center">
+										<h2 class="text-md font-primary">
+											<a href="{{ path('product_show', {'category_slug': 'macarons', 'slug': 'macaron-chocolat'}) }}" class="product-card-v2__title">Macaron Chocolat</a>
+										</h2>
+									</div>
+								</div>
+
+								<div class="prod-card-v2 col-4@md">
+									<a href="{{ path('product_show', {'category_slug': 'macarons', 'slug': 'macaron-pistache'}) }}" class="prod-card-v2__img-link" aria-label="Macaron Pistache">
+										<figure class="media-wrapper media-wrapper--4:5">
+											<img src="uploads/cc54b561350cfc5454f40e301b341870dbd52848.jpeg" loading="lazy" alt="Macaron Pistache">
+											<img src="uploads/5aa524324f686e4d2872820099a0d70656b6ff14.jpeg" loading="lazy" alt="Macaron Pistache">
+										</figure>
+									</a>
+
+									<div class="padding-sm text-center">
+										<h2 class="text-md font-primary">
+											<a href="{{ path('product_show', {'category_slug': 'macarons', 'slug': 'macaron-pistache'}) }}" class="product-card-v2__title">Macaron Pistache</a>
+										</h2>
+									</div>
+								</div>
+
+								<div class="prod-card-v2 col-4@md">
+									<a href="{{ path('product_show', {'category_slug': 'macarons', 'slug': 'macaron-framboise'}) }}" class="prod-card-v2__img-link" aria-label="Macaron Framboise">
+										<figure class="media-wrapper media-wrapper--4:5">
+											<img src="uploads/9201e0c5a32fe09c0d5501b126969e8a1eeca9bf.jpeg" loading="lazy" alt="Macaron Framboise">
+											<img src="uploads/3c983301298cbd7f0b7483da5794a255bd69adfb.jpeg" loading="lazy" alt="Macaron Framboise">
+										</figure>
+									</a>
+
+									<div class="padding-sm text-center">
+										<h2 class="text-md font-primary">
+											<a href="{{ path('product_show', {'category_slug': 'macarons', 'slug': 'macaron-framboise'}) }}" class="product-card-v2__title">Macaron Framboise</a>
+										</h2>
+									</div>
+								</div>
+								
 							</div>
 						</div>
 					</div>
