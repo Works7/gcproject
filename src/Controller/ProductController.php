@@ -48,14 +48,6 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/noel", name="product_noel")
-     */
-    public function noel()
-    {
-        return $this->render('product/noel.html.twig');
-    }
-
-    /**
      * @Route("/{category_slug}/{slug}", name="product_show")
      */
     public function show($slug, ProductRepository $productRepository, CategoryRepository $categoryRepository)

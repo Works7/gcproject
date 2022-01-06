@@ -48,215 +48,6 @@
 					<div class="mega-nav__nav-inner">
 						<ul
 							class="mega-nav__items">
-							<!-- layout 1 -> tabbed content -->
-							<li class="mega-nav__item js-mega-nav__item">
-								<button class="reset mega-nav__control js-mega-nav__control js-tab-focus">
-									Noël
-									<i class="mega-nav__arrow-icon" aria-hidden="true">
-										<svg class="icon" viewbox="0 0 16 16">
-											<g class="icon__group" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10">
-												<path d="M2 2l12 12"/>
-												<path d="M14 2L2 14"/>
-											</g>
-										</svg>
-									</i>
-								</button>
-
-								<div class="mega-nav__sub-nav-wrapper">
-									<div class="mega-nav__sub-nav mega-nav__sub-nav--layout-1">
-										<!-- links - visible on mobile -->
-										<ul class="mega-nav__sub-items">
-											<li class="mega-nav__sub-item">
-												<a href="{{ path('product_category', {'slug' : 'buches-de-noel'}) }}" class="mega-nav__sub-link">
-													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-buche.jpg') }}" alt="Bûches de Noël">
-														<i>Bûches de Noël</i>
-													</span>
-												</a>
-											</li>
-
-											<li class="mega-nav__sub-item">
-												<a href="{{ path('product_category', {'slug' : 'coffrets-de-chocolats'}) }}" class="mega-nav__sub-link">
-													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-coffret.jpg') }}" alt="Coffrets de chocolats">
-														<i>Coffrets de chocolats</i>
-													</span>
-												</a>
-											</li>
-
-											<li class="mega-nav__sub-item">
-												<a href="{{ path('product_category', {'slug' : 'moulages-de-noel'}) }}" class="mega-nav__sub-link">
-													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-moulage.jpg') }}" alt="Moulages de Noël">
-														<i>Moulages de Noël</i>
-													</span>
-												</a>
-											</li>
-
-											<li class="mega-nav__sub-item">
-												<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="mega-nav__sub-link">
-													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-specialite.jpg') }}" alt="Spécialités en chocolat">
-														<i>Spécialités en chocolat</i>
-													</span>
-												</a>
-											</li>
-
-											<li class="mega-nav__sub-item">
-												<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="mega-nav__sub-link">
-													<span class="flex items-center gap-xs">
-														<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-macaron.jpg') }}" alt="Macarons">
-														<i>Macarons</i>
-													</span>
-												</a>
-											</li>
-										</ul>
-
-										<!-- tabs - visible on desktop -->
-										<div class="mega-nav__tabs grid gap-lg js-tabs">
-											<ul class="col-4 mega-nav__tabs-controls js-tabs__controls" aria-label="Select a product">
-												<li>
-													<a href="#tabProduct1" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
-														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-buche.jpg') }}" alt="Bûches de Noël">
-
-															<i class="margin-right-xxxs">Bûches de Noël</i>
-
-															<svg class="icon icon--xs margin-left-auto" viewbox="0 0 16 16" aria-hidden="true">
-																<path d="M5,2l6,6L5,14" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-															</svg>
-														</span>
-													</a>
-												</li>
-
-												<li>
-													<a href="#tabProduct2" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
-														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-coffret.jpg') }}" alt="Coffrets de chocolats">
-
-															<i class="margin-right-xxxs">Coffrets de chocolats</i>
-
-															<svg class="icon icon--xs margin-left-auto" viewbox="0 0 16 16" aria-hidden="true">
-																<path d="M5,2l6,6L5,14" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-															</svg>
-														</span>
-													</a>
-												</li>
-
-												<li>
-													<a href="#tabProduct3" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
-														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-moulage.jpg') }}" alt="Moulages de Noël">
-
-															<i class="margin-right-xxxs">Moulages de Noël</i>
-
-															<svg class="icon icon--xs margin-left-auto" viewbox="0 0 16 16" aria-hidden="true">
-																<path d="M5,2l6,6L5,14" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-															</svg>
-														</span>
-													</a>
-												</li>
-
-												<li>
-													<a href="#tabProduct4" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
-														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-specialite.jpg') }}" alt="Spécialités en chocolat">
-
-															<i class="margin-right-xxxs">Spécialités en chocolat</i>
-
-															<svg class="icon icon--xs margin-left-auto" viewbox="0 0 16 16" aria-hidden="true">
-																<path d="M5,2l6,6L5,14" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-															</svg>
-														</span>
-													</a>
-												</li>
-
-												<li>
-													<a href="#tabProduct5" class="mega-nav__tabs-control js-tab-focus" aria-selected="true">
-														<span class="flex items-center gap-xs">
-															<img class="block width-lg height-lg radius-50% object-cover" src="{{ asset('build/images/noel-rubrique-macaron.jpg') }}" alt="Macarons">
-
-															<i class="margin-right-xxxs">Macarons</i>
-
-															<svg class="icon icon--xs margin-left-auto" viewbox="0 0 16 16" aria-hidden="true">
-																<path d="M5,2l6,6L5,14" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
-															</svg>
-														</span>
-													</a>
-												</li>
-											</ul>
-
-											<div class="col-8 js-tabs__panels">
-												<section id="tabProduct1" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="{{ path('product_category', {'slug' : 'buches-de-noel'}) }}" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-buche.jpg') }}" alt="Bûches de Noël">
-													</a>
-
-													<div class="text-component">
-														<h1 class="text-xl">Bûches de Noël</h1>
-														<p class="color-contrast-medium"><p>
-															<a href="{{ path('product_category', {'slug' : 'buches-de-noel'}) }}" class="btn btn--subtle">Découvrir</a>
-														</p>
-													</div>
-												</section>
-
-												<section id="tabProduct2" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="{{ path('product_category', {'slug' : 'coffrets-de-chocolats'}) }}" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-coffret.jpg') }}" alt="Coffrets de chocolats">
-													</a>
-
-													<div class="text-component">
-														<h1 class="text-xl">Coffrets de chocolats</h1>
-														<p class="color-contrast-medium"><p>
-															<a href="{{ path('product_category', {'slug' : 'coffrets-de-chocolats'}) }}" class="btn btn--subtle">Découvrir</a>
-														</p>
-													</div>
-												</section>
-
-												<section id="tabProduct3" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="{{ path('product_category', {'slug' : 'moulages-de-noel'}) }}" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-moulage.jpg') }}" alt="Moulages de Noël<">
-													</a>
-
-													<div class="text-component">
-														<h1 class="text-xl">Moulages de Noël</h1>
-														<p class="color-contrast-medium"><p>
-															<a href="{{ path('product_category', {'slug' : 'moulages-de-noel'}) }}" class="btn btn--subtle">Découvrir</a>
-														</p>
-													</div>
-												</section>
-
-												<section id="tabProduct4" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-specialite.jpg') }}" alt="Spécialités en chocolat">
-													</a>
-
-													<div class="text-component">
-														<h1 class="text-xl">Spécialités en chocolat</h1>
-														<p class="color-contrast-medium"><p>
-															<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="btn btn--subtle">Découvrir</a>
-														</p>
-													</div>
-												</section>
-
-												<section id="tabProduct5" class="mega-nav__tabs-panel js-tabs__panel">
-													<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="mega-nav__tabs-img margin-bottom-md">
-														<img class="block width-100%" src="{{ asset('build/images/noel-rubrique-macaron.jpg') }}" alt="Macarons">
-													</a>
-
-													<div class="text-component">
-														<h1 class="text-xl">Macarons</h1>
-														<p class="color-contrast-medium"><p>
-															<a href="{{ path('product_category', {'slug' : 'macarons'}) }}" class="btn btn--subtle">Découvrir</a>
-														</p>
-													</div>
-												</section>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-
 							<!-- layout 2 -> multiple lists -->
 							<li class="mega-nav__item">
 								<a href="{{ path('product_category', {'slug' : 'patisseries'}) }}" class="mega-nav__control" rel="noopener">Pâtisseries</a>
@@ -279,9 +70,23 @@
 								<div class="mega-nav__sub-nav-wrapper">
 									<div class="mega-nav__sub-nav mega-nav__sub-nav--layout-3">
 										<div class="mega-nav__card">
+											<a href="{{ path('product_category', {'slug' : 'coffrets-de-chocolats'}) }}" class="block overflow-hidden">
+												<figure class="media-wrapper media-wrapper--4:3">
+													<img class="block width-100%" src="{{ asset('build/images/chocolat-ballotins-chocolat.jpg') }}" alt="Coffrets de chocolats">
+												</figure>
+											</a>
+
+											<div class="margin-top-sm">
+												<h3 class="text-base">
+													<a href="{{ path('product_category', {'slug' : 'coffretss-de-chocolat'}) }}" class="mega-nav__card-title">Coffrets de chocolats</a>
+												</h3>
+											</div>
+										</div>
+
+										<div class="mega-nav__card">
 											<a href="{{ path('product_category', {'slug' : 'ballotins-de-chocolats'}) }}" class="block overflow-hidden">
 												<figure class="media-wrapper media-wrapper--4:3">
-													<img class="block width-100%" src="{{ asset('build/images/chocolat-ballotins-chocolat.jpg') }}" alt="Image description">
+													<img class="block width-100%" src="{{ asset('build/images/chocolat-ballotins-chocolat.jpg') }}" alt="Ballotins de chocolats">
 												</figure>
 											</a>
 
@@ -295,7 +100,7 @@
 										<div class="mega-nav__card">
 											<a href="{{ path('product_category', {'slug' : 'tablettes-de-chocolat'}) }}" class="block overflow-hidden">
 												<figure class="media-wrapper media-wrapper--4:3">
-													<img class="block width-100%" src="{{ asset('build/images/chocolat-tablettes.jpg') }}" alt="Image description">
+													<img class="block width-100%" src="{{ asset('build/images/chocolat-tablettes.jpg') }}" alt="Tablettes de chocolat">
 												</figure>
 											</a>
 
@@ -309,27 +114,13 @@
 										<div class="mega-nav__card">
 											<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="block overflow-hidden">
 												<figure class="media-wrapper media-wrapper--4:3">
-													<img class="block width-100%" src="{{ asset('build/images/chocolat-specialites.jpg') }}" alt="Image description">
+													<img class="block width-100%" src="{{ asset('build/images/chocolat-specialites.jpg') }}" alt="Spécialités en chocolat">
 												</figure>
 											</a>
 
 											<div class="margin-top-sm">
 												<h3 class="text-base">
 													<a href="{{ path('product_category', {'slug' : 'specialites-en-chocolat'}) }}" class="mega-nav__card-title">Spécialités en chocolat</a>
-												</h3>
-											</div>
-										</div>
-
-										<div class="mega-nav__card">
-											<a href="{{ path('product_category', {'slug' : 'moulages'}) }}" class="block overflow-hidden">
-												<figure class="media-wrapper media-wrapper--4:3">
-													<img class="block width-100%" src="{{ asset('build/images/chocolat-moulages.jpg') }}" alt="Image description">
-												</figure>
-											</a>
-
-											<div class="margin-top-sm">
-												<h3 class="text-base">
-													<a href="{{ path('product_category', {'slug' : 'moulages'}) }}" class="mega-nav__card-title">Moulages</a>
 												</h3>
 											</div>
 										</div>
