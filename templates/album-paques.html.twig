@@ -1,0 +1,77 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Ganache &amp; Cabosse | Pâtisserie Chocolaterie | Rethel
+{% endblock %}
+
+{% block body %}
+<div class="adv-gallery-v4 masonry js-masonry">
+  <div class="masonry__loader" aria-hidden="true">
+    <svg class="icon icon--md icon--is-spinning" viewBox="0 0 32 32"><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor" fill="none"><circle cx="16" cy="16" r="15" opacity="0.4"></circle><path d="M16,1A15,15,0,0,1,31,16" stroke-linecap="butt"></path></g></svg>
+  </div>
+
+  <ul class="masonry__list js-masonry__list">
+    <li class="masonry__item js-masonry__item padding-x-xl padding-bottom-xl reveal-fx reveal-fx--translate-up">
+      <figure>
+        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-1.jpg" alt="Image Description">
+  
+        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
+          Image Caption
+        </figcaption>
+      </figure>
+    </li>
+
+    <li class="masonry__item js-masonry__item padding-x-xl padding-bottom-xl reveal-fx reveal-fx--translate-up">
+      <figure>
+        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-2.jpg" alt="Image Description">
+  
+        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
+          Image Caption
+        </figcaption>
+      </figure>
+    </li>
+
+    <li class="masonry__item js-masonry__item padding-bottom-xl reveal-fx reveal-fx--translate-up">
+      <figure>
+        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-3.jpg" alt="Image Description">
+  
+        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
+          Image Caption
+        </figcaption>
+      </figure>
+    </li>
+
+    <li class="masonry__item js-masonry__item padding-left-xl padding-bottom-xl reveal-fx reveal-fx--translate-up">
+      <figure>
+        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-4.jpg" alt="Image Description">
+  
+        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
+          Image Caption
+        </figcaption>
+      </figure>
+    </li>
+
+    <li class="masonry__item js-masonry__item padding-x-xl padding-bottom-xl reveal-fx reveal-fx--translate-up">
+      <figure>
+        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-5.jpg" alt="Image Description">
+  
+        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
+          Image Caption
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+
+  <figure class="padding-x-xl reveal-fx reveal-fx--translate-up">
+    <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-6.jpg" alt="Image Description">
+
+    <figcaption class="text-sm color-contrast-medium margin-top-xxs">
+      Image Caption
+    </figcaption>
+  </figure>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{% include '_partials/footer.html.twig' %}
+{% endblock %}

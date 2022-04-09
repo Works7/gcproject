@@ -23,6 +23,14 @@ class HomeController extends AbstractController
     }
 
     /**
+     * @Route("/album-paques", name="album-paques")
+     */
+    public function albumPaques()
+    {
+        return $this->render('album-paques.html.twig');
+    }
+
+    /**
      * @Route("/contact", name="contact")
      */
     public function contact()

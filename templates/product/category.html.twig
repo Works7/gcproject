@@ -41,9 +41,9 @@
 						<a href="{{ path('product_show', {'category_slug': p.category.slug, 'slug': p.slug}) }}" class="prod-card-v2__img-link" aria-label="Description of the link">
 							<figure class="media-wrapper media-wrapper--4:5">
 								<img src="/uploads/{{ p.mainPicture }}" alt="{{ category.name }} | {{ p.name }} | Ganache &amp; Cabosse">
-								{% for image in p.images %}
+								{# {% for image in p.images %}
 									<img src="/uploads/{{ image.url }}" alt="{{ category.name }} | {{ p.name }} | Ganache &amp; Cabosse">
-								{% endfor %}
+								{% endfor %} #}
 							</figure>
 						</a>
 
