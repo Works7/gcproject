@@ -5,71 +5,78 @@
 {% endblock %}
 
 {% block body %}
-<div class="adv-gallery-v4 masonry js-masonry">
-  <div class="masonry__loader" aria-hidden="true">
-    <svg class="icon icon--md icon--is-spinning" viewBox="0 0 32 32"><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor" fill="none"><circle cx="16" cy="16" r="15" opacity="0.4"></circle><path d="M16,1A15,15,0,0,1,31,16" stroke-linecap="butt"></path></g></svg>
-  </div>
+<section class="padding-y-md">
+		<div class="container max-width-adaptive-lg">
+      <div class="adv-gallery-v5">
+        <ul class="grid gap-lg gap-md@md">
+          <li class="col-8@md">
+            <img class="block width-100%" src="{{ asset('build/images/paques-photo-gros-oeufs-jardins-1.jpg') }}" alt="Gros Oeufs et Jardins de Pâques">
+          </li>
 
-  <ul class="masonry__list js-masonry__list">
-    <li class="masonry__item js-masonry__item padding-x-xl padding-bottom-xl reveal-fx reveal-fx--translate-up">
-      <figure>
-        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-1.jpg" alt="Image Description">
-  
-        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
-          Image Caption
-        </figcaption>
-      </figure>
-    </li>
+          <li class="col-4@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-poules-1.jpg') }}" alt="Poules">
+          </li>
 
-    <li class="masonry__item js-masonry__item padding-x-xl padding-bottom-xl reveal-fx reveal-fx--translate-up">
-      <figure>
-        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-2.jpg" alt="Image Description">
-  
-        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
-          Image Caption
-        </figcaption>
-      </figure>
-    </li>
+          <li class="col-4@md">
+            <img class="block width-100%" src="{{ asset('build/images/paques-photo-poussins-1.jpg') }}" alt="Poussins">
+          </li>
 
-    <li class="masonry__item js-masonry__item padding-bottom-xl reveal-fx reveal-fx--translate-up">
-      <figure>
-        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-3.jpg" alt="Image Description">
-  
-        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
-          Image Caption
-        </figcaption>
-      </figure>
-    </li>
+          <li class="col-8@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-gabosse.jpg') }}" alt="Lapin Gabosse">
 
-    <li class="masonry__item js-masonry__item padding-left-xl padding-bottom-xl reveal-fx reveal-fx--translate-up">
-      <figure>
-        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-4.jpg" alt="Image Description">
-  
-        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
-          Image Caption
-        </figcaption>
-      </figure>
-    </li>
+            <div class="text-component margin-top-auto">
+              <h2 class="text-md">Tombola de Pâques</h2>
+              <p class="text-sm color-contrast-medium">Tentez de gagner le lapin Gabosse !</p>
+            </div>
+          </li>
 
-    <li class="masonry__item js-masonry__item padding-x-xl padding-bottom-xl reveal-fx reveal-fx--translate-up">
-      <figure>
-        <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-5.jpg" alt="Image Description">
-  
-        <figcaption class="text-sm color-contrast-medium margin-top-xxs">
-          Image Caption
-        </figcaption>
-      </figure>
-    </li>
-  </ul>
+          <li class="col-4@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-oeufs-marteles-diaphragme-2.jpg') }}" alt="Oeufs Diaphragme">
+          </li>
 
-  <figure class="padding-x-xl reveal-fx reveal-fx--translate-up">
-    <img class="block width-100%" src="../../../app/assets/img/adv-gallery-v4-img-6.jpg" alt="Image Description">
+          <li class="col-4@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-oeufs-origami-2.jpg') }}" alt="Oeufs Origami">
+          </li>
 
-    <figcaption class="text-sm color-contrast-medium margin-top-xxs">
-      Image Caption
-    </figcaption>
-  </figure>
-</div>
+          <li class="col-4@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-oeufs-vibrato-2.jpg') }}" alt="Oeufs Vibrato">
+          </li>
+
+          <li class="col-6@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-oeufs-vibrato-1.jpg') }}" alt="Oeufs Vibrato">
+          </li>
+
+           <li class="col-6@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-cloches-1.jpg') }}" alt="Cloches">
+          </li>
+
+          <li class="col-8@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-grand-jardin-1.jpg') }}" alt="Jardins de Pâques">
+          </li>
+
+          <li class="col-4@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-oeufs-diaphragme-1.jpg') }}" alt="Oeufs Diaphragme">
+          </li>
+
+          <li class="col-6@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-oeufs-origami-1.jpg') }}" alt="Oeufs Origami">
+          </li>
+
+          <li class="col-6@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-oeufs-marteles-1.jpg') }}" alt="Oeufs Martelés">
+          </li>
+
+          <li class="col-8@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-gros-oeufs-1.jpg') }}" alt="Gros Oeufs">
+          </li>
+
+          <li class="col-4@md flex flex-column">
+            <img class="block width-100% margin-bottom-xs" src="{{ asset('build/images/paques-photo-petit-jardin-4.jpg') }}" alt="Jardins de Pâques">
+          </li>
+        </ul>
+      </div>
+    </div>
+</section>
 {% endblock %}
 
 {% block footer %}

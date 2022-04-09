@@ -10,6 +10,9 @@
 		<div class="container max-width-adaptive-lg padding-top-lg padding-bottom-xl position-relative z-index-2">
 			<div class="text-center">
 				<h1 class="text-xxxl text-uppercase">{{ category.name }}</h1>
+				{% if category.slug == "paques" %}
+					<p class="margin-top-sm"><a href="{{ path('album-paques') }}">Pâques' en images !</a></p>
+				{% endif %}
 			</div>
 		</div>
 	</section>
