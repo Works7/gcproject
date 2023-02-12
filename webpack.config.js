@@ -45,6 +45,7 @@ Encore
     .addEntry('_1_diagonal-movement', './assets/js/components/_1_diagonal-movement.js')
     .addEntry('_1_google-maps', './assets/js/components/_1_google-maps.js')
     .addEntry('_1_image-magnifier', './assets/js/components/_1_image-magnifier.js')
+    .addEntry('_1_looping_tabs', './assets/js/components/_1_looping_tabs.js')
     .addEntry('_1_masonry', './assets/js/components/_1_masonry.js')
     .addEntry('_1_menu', './assets/js/components/_1_menu.js')
     .addEntry('_1_modal-window', './assets/js/components/_1_modal-window.js')
