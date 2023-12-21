@@ -61,6 +61,7 @@ Encore
     .addEntry('_1_slider', './assets/js/components/_1_slider.js')
     .addEntry('_1_smooth-scrolling', './assets/js/components/_1_smooth-scrolling.js')
     .addEntry('_1_social-sharing', './assets/js/components/_1_social-sharing.js')
+    .addEntry('_1_sticky-feature', './assets/js/components/_1_sticky-feature.js')
     .addEntry('_1_sticky-hero', './assets/js/components/_1_sticky-hero.js')
     .addEntry('_1_swipe-content', './assets/js/components/_1_swipe-content.js')
     .addEntry('_1_table', './assets/js/components/_1_table.js')

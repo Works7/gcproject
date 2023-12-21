@@ -31,6 +31,14 @@ class HomeController extends AbstractController
     // }
 
     /**
+     * @Route("/coffret-gp-code", name="coffret-gp-code")
+     */
+    public function coffretgpcode()
+    {
+        return $this->render('coffret-gp-code.html.twig');
+    }
+
+    /**
      * @Route("/contact", name="contact")
      */
     public function contact()

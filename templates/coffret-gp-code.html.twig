@@ -1,0 +1,115 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	Ganache &amp; Cabosse | Pâtisserie Chocolaterie | Rethel
+{% endblock %}
+
+{% block body %}
+
+<div class="container padding-y-lg max-width-lg">
+<div class="tab-features-v2 js-tabs" data-show-panel-class="tab-features-v2__panel--display" data-hide-panel-class="tab-features-v2__panel--hide">
+  <div class="grid gap-md items-center@md">
+    <div class="col-6@md">
+      <ul class="tab-features-v2__controls-list js-tabs__controls" aria-label="Tabs navigation">
+        <li>
+          <a href="#tab-features-1" class="tab-features-v2__control" aria-selected="true">
+            <span class="tab-features-v2__control-title">Carré - Chocolat noir 66%</span>
+            <span class="tab-features-v2__control-description">Ganache au chocolat noir Komuntu 80%</span>
+          </a>
+        </li>
+    
+        <li>
+          <a href="#tab-features-2" class="tab-features-v2__control">
+            <span class="tab-features-v2__control-title">Carré - Chocolat au lait 33% - Nuage de point</span>
+            <span class="tab-features-v2__control-description">Ganache au chocolat au lait Jivara 40% Yuzu</span>
+          </a>
+        </li>
+    
+        <li>
+          <a href="#tab-features-3" class="tab-features-v2__control">
+            <span class="tab-features-v2__control-title">Carré - Chocolat au lait 33% - Éclat de noisettes</span>
+            <span class="tab-features-v2__control-description">Praliné Amande Valencia 70%</span>
+          </a>
+        </li>
+    
+        <li>
+          <a href="#tab-features-4" class="tab-features-v2__control">
+            <span class="tab-features-v2__control-title">Rectangle - Chocolat noir 66% - Éclat de chocolat framboise</span>
+            <span class="tab-features-v2__control-description">Ganache au chocolat noir Guanaja 70% Framboise & Fleur d'oranger</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#tab-features-5" class="tab-features-v2__control">
+            <span class="tab-features-v2__control-title">Rectangle - Chocolat au lait 33%</span>
+            <span class="tab-features-v2__control-description">Ganache au chocolat au lait Hukambi 35% Café</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#tab-features-6" class="tab-features-v2__control">
+            <span class="tab-features-v2__control-title">Rectangle - Chocolat au lait 33% - 4 Traits</span>
+            <span class="tab-features-v2__control-description">Ganache au chocolat au lait Bahibé 46% Vanille</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#tab-features-7" class="tab-features-v2__control">
+            <span class="tab-features-v2__control-title">Rectangle - Chocolat noir 66%</span>
+            <span class="tab-features-v2__control-description">Pâte d’amande 55%</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#tab-features-8" class="tab-features-v2__control">
+            <span class="tab-features-v2__control-title">Rectangle - Chocolat noir 66% - 3 Points</span>
+            <span class="tab-features-v2__control-description">Gianduja Noisette Lait 35%</span>
+          </a>
+        </li>
+
+        <li class="tab-features-v2__text-crop-gradient" aria-hidden="true"></li>
+      </ul>
+    </div>
+  
+    <div class="tab-features-v2__panels col-6@md js-tabs__panels">
+      <section id="tab-features-1" class="tab-features-v2__panel js-tabs__panel">
+        <img class="block width-100% radius-md" src="{{ asset('build/images/carre-noir-ganache-noir.jpg') }}" alt="Image à venir">
+      </section>
+  
+      <section id="tab-features-2" class="tab-features-v2__panel js-tabs__panel">
+        <img class="block width-100% radius-md" src="{{ asset('build/images/carre-ganache-lait-yuzu.jpg') }}" alt="Image description">
+      </section>
+  
+      <section id="tab-features-3" class="tab-features-v2__panel js-tabs__panel">
+        <img class="block width-100% radius-md" src="{{ asset('build/images/carre-lait-praline-amande.jpg') }}" alt="Image description">
+      </section>
+  
+      <section id="tab-features-4" class="tab-features-v2__panel js-tabs__panel">
+        <img class="block width-100% radius-md" src="{{ asset('build/images/rectangle-noir-ganache-framboise.jpg') }}" alt="Image description">
+      </section>
+
+      <section id="tab-features-5" class="tab-features-v2__panel js-tabs__panel">
+        <img class="block width-100% radius-md" src="{{ asset('build/images/rectangle-lait-ganache-lait-cafe.jpg') }}" alt="Image à venir">
+      </section>
+  
+      <section id="tab-features-6" class="tab-features-v2__panel js-tabs__panel">
+        <img class="block width-100% radius-md" src="{{ asset('build/images/rectangle-lait-ganache-lait-vanille.jpg') }}" alt="Image description">
+      </section>
+  
+      <section id="tab-features-7" class="tab-features-v2__panel js-tabs__panel">
+        <img class="block width-100% radius-md" src="{{ asset('build/images/rectangle-pate-amande.jpg') }}" alt="Image description">
+      </section>
+  
+      <section id="tab-features-8" class="tab-features-v2__panel js-tabs__panel">
+        <img class="block width-100% radius-md" src="{{ asset('build/images/rectangle-gianduja-noisette.jpg') }}" alt="Image description">
+      </section>
+    </div>
+  </div>
+</div>
+</div>
+
+	{% endblock %}
+
+	{% block footer %}
+		{% include '_partials/footer.html.twig' %}
+	{% endblock %}
